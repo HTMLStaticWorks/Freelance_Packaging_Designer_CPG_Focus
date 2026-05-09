@@ -119,24 +119,33 @@
         <!-- Main Content -->
         <main id="overview" class="flex-grow overflow-y-auto bg-slate-50 dark:bg-dark flex flex-col relative scroll-smooth">
             <!-- Header -->
-            <header class="sticky top-0 z-40 bg-white/80 dark:bg-dark/80 backdrop-blur-md px-4 lg:px-10 h-20 lg:h-24 flex items-center justify-between border-b border-slate-200 dark:border-white/5">
+            <header class="sticky top-0 z-40 bg-white/80 dark:bg-dark/80 backdrop-blur-md px-4 lg:px-10 h-28 lg:h-36 flex items-center justify-between border-b border-slate-200 dark:border-white/5">
                 <div class="flex items-center space-x-4 lg:space-x-0 rtl:space-x-reverse">
                     <button onclick="toggleDashboardMenu()" class="lg:hidden p-2 text-slate-600 dark:text-white bg-slate-100 dark:bg-white/5 rounded-xl">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" /></svg>
                     </button>
-                    <div class="max-w-[150px] sm:max-w-[180px] lg:max-w-none">
-                        <h2 class="text-base sm:text-lg lg:text-2xl font-black truncate">Project: <span class="text-primary lg:underline lg:decoration-4 lg:underline-offset-4">Artisanal Coffee</span></h2>
-                        <p class="text-[8px] sm:text-[9px] lg:text-xs text-slate-500 font-bold uppercase tracking-widest mt-0.5 truncate">Status: Active Design</p>
+                    <div class="max-w-[150px] sm:max-w-[250px] lg:max-w-none lg:py-4">
+                        <h2 class="text-lg sm:text-xl lg:text-3xl font-black truncate">Project: <span class="text-primary lg:underline lg:decoration-4 lg:underline-offset-8">Artisanal Coffee</span></h2>
+                        <p class="text-[9px] sm:text-[10px] lg:text-sm text-slate-500 font-bold uppercase tracking-widest mt-1 lg:mt-2 truncate">Status: <span class="text-green-500">Active Design</span></p>
                     </div>
                 </div>
                 
                 <div class="flex items-center space-x-2 lg:space-x-6 rtl:space-x-reverse">
                     <div class="flex items-center space-x-1 lg:space-x-2 rtl:space-x-reverse">
-                        <button onclick="toggleTheme()" class="p-2 text-slate-400 hover:text-primary transition-all rounded-full hover:bg-slate-100 dark:hover:bg-white/5" title="Toggle Theme">
+                        <button onclick="toggleTheme()" class="hidden lg:flex p-2 text-slate-400 hover:text-primary transition-all rounded-full hover:bg-slate-100 dark:hover:bg-white/5" title="Toggle Theme">
                             <svg class="w-5 h-5 lg:w-6 lg:h-6 dark:hidden" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
                             <svg class="w-5 h-5 lg:w-6 lg:h-6 hidden dark:block" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
                         </button>
-                        <button onclick="toggleRTL()" class="p-1.5 lg:p-2 text-slate-400 hover:text-primary transition-all text-[8px] lg:text-[10px] font-black uppercase tracking-widest rounded-full hover:bg-slate-100 dark:hover:bg-white/5" title="Toggle RTL">RTL</button>
+                        <button onclick="toggleRTL()" class="hidden lg:block p-1.5 lg:p-2 text-slate-400 hover:text-primary transition-all text-[8px] lg:text-[10px] font-black uppercase tracking-widest rounded-full hover:bg-slate-100 dark:hover:bg-white/5" title="Toggle RTL">RTL</button>
+
+                        <!-- Fixed Mobile Utilities -->
+                        <div class="lg:hidden fixed top-4 right-20 z-[60] flex items-center space-x-2 rtl:space-x-reverse">
+                            <button onclick="toggleTheme()" class="w-10 h-10 flex items-center justify-center rounded-xl bg-white/80 dark:bg-dark/80 backdrop-blur-md border border-slate-200 dark:border-white/10 shadow-lg transition-all active:scale-95" title="Toggle Theme">
+                                <svg class="w-5 h-5 dark:hidden" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+                                <svg class="w-5 h-5 hidden dark:block text-primary" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+                            </button>
+                            <button onclick="toggleRTL()" class="w-10 h-10 flex items-center justify-center rounded-xl bg-white/80 dark:bg-dark/80 backdrop-blur-md border border-slate-200 dark:border-white/10 shadow-lg text-[10px] font-black uppercase transition-all active:scale-95" title="Toggle RTL">RTL</button>
+                        </div>
                         <button class="relative p-2 text-slate-400 hover:text-primary transition-all">
                             <svg class="w-5 h-5 lg:w-6 lg:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" /></svg>
                             <span class="absolute top-1.5 right-1.5 lg:top-1 lg:right-1 w-2 h-2 lg:w-2.5 lg:h-2.5 bg-primary border-2 border-white dark:border-dark rounded-full"></span>
@@ -272,31 +281,35 @@
                         </div>
 
                         <!-- Production File Tracker -->
-                        <div id="files" class="bg-white dark:bg-dark-soft p-6 lg:p-10 rounded-3xl lg:rounded-[3rem] shadow-sm border border-slate-100 dark:border-white/5">
-                            <div class="flex items-center justify-between mb-10">
+                        <div id="files" class="bg-white dark:bg-dark-soft p-5 lg:p-10 rounded-3xl lg:rounded-[3rem] shadow-sm border border-slate-100 dark:border-white/5">
+                            <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-8 space-y-4 sm:space-y-0">
                                 <h3 class="text-xl lg:text-2xl font-black">Production Files</h3>
-                                <button class="text-xs font-black text-primary uppercase tracking-widest hover:underline">Download All Assets</button>
+                                <button class="text-[10px] sm:text-xs font-black text-primary uppercase tracking-widest hover:underline text-left sm:text-right">Download All Assets</button>
                             </div>
-                            <div class="grid md:grid-cols-2 gap-4">
-                                <div class="p-6 bg-slate-50 dark:bg-dark rounded-3xl border border-slate-100 dark:border-white/5 flex items-center justify-between group hover:border-primary transition-all">
-                                    <div class="flex items-center space-x-4">
-                                        <div class="w-12 h-12 bg-primary/10 text-primary rounded-2xl flex items-center justify-center font-black">AI</div>
-                                        <div>
-                                            <p class="text-sm font-black">Coffee_Bag_Dieline.ai</p>
-                                            <p class="text-[10px] text-slate-400 font-bold">STRUCTURAL • 12.4 MB</p>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div class="p-4 sm:p-6 bg-slate-50 dark:bg-dark rounded-3xl border border-slate-100 dark:border-white/5 flex items-center justify-between group hover:border-primary transition-all">
+                                    <div class="flex items-center space-x-3 sm:space-x-4 min-w-0">
+                                        <div class="w-10 h-10 sm:w-12 sm:h-12 bg-primary/10 text-primary rounded-xl sm:rounded-2xl flex items-center justify-center font-black shrink-0 text-xs sm:text-base">AI</div>
+                                        <div class="truncate">
+                                            <p class="text-xs sm:text-sm font-black truncate">Coffee_Bag_Dieline.ai</p>
+                                            <p class="text-[8px] sm:text-[10px] text-slate-400 font-bold uppercase tracking-widest">STRUCTURAL • 12.4 MB</p>
                                         </div>
                                     </div>
-                                    <button class="p-2 text-slate-300 group-hover:text-primary transition-colors"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12" /></svg></button>
+                                    <button class="p-2 text-slate-300 group-hover:text-primary transition-colors shrink-0 ml-2">
+                                        <svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12" /></svg>
+                                    </button>
                                 </div>
-                                <div class="p-6 bg-slate-50 dark:bg-dark rounded-3xl border border-slate-100 dark:border-white/5 flex items-center justify-between group hover:border-primary transition-all">
-                                    <div class="flex items-center space-x-4">
-                                        <div class="w-12 h-12 bg-secondary/10 text-secondary rounded-2xl flex items-center justify-center font-black">PDF</div>
-                                        <div>
-                                            <p class="text-sm font-black">Technical_Specs_V2.pdf</p>
-                                            <p class="text-[10px] text-slate-400 font-bold">SPEC • 2.1 MB</p>
+                                <div class="p-4 sm:p-6 bg-slate-50 dark:bg-dark rounded-3xl border border-slate-100 dark:border-white/5 flex items-center justify-between group hover:border-primary transition-all">
+                                    <div class="flex items-center space-x-3 sm:space-x-4 min-w-0">
+                                        <div class="w-10 h-10 sm:w-12 sm:h-12 bg-secondary/10 text-secondary rounded-xl sm:rounded-2xl flex items-center justify-center font-black shrink-0 text-xs sm:text-base">PDF</div>
+                                        <div class="truncate">
+                                            <p class="text-xs sm:text-sm font-black truncate">Technical_Specs_V2.pdf</p>
+                                            <p class="text-[8px] sm:text-[10px] text-slate-400 font-bold uppercase tracking-widest">SPEC • 2.1 MB</p>
                                         </div>
                                     </div>
-                                    <button class="p-2 text-slate-300 group-hover:text-primary transition-colors"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12" /></svg></button>
+                                    <button class="p-2 text-slate-300 group-hover:text-primary transition-colors shrink-0 ml-2">
+                                        <svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12" /></svg>
+                                    </button>
                                 </div>
                             </div>
                         </div>

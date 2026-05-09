@@ -73,7 +73,7 @@
              <svg class="w-4 h-4 dark:hidden" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
              <svg class="w-4 h-4 hidden dark:block text-white" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" /></svg>
         </button>
-        <button onclick="toggleRTL()" class="px-3 py-2 border border-slate-200 dark:border-white/10 rounded hover:bg-white dark:hover:bg-white/5 transition-all text-[10px] font-black shadow-sm dark:text-white uppercase tracking-widest">RTL</button>
+        <button onclick="toggleRTL()" class="hidden lg:block px-3 py-2 border border-slate-200 dark:border-white/10 rounded hover:bg-white dark:hover:bg-white/5 transition-all text-[10px] font-black shadow-sm dark:text-white uppercase tracking-widest">RTL</button>
     </div>
 
     <div class="auth-card shadow-2xl shadow-slate-200/50 dark:shadow-none">
@@ -93,7 +93,7 @@
         </div>
 
         <form action="dashboard.html" class="space-y-6">
-            <div class="grid grid-cols-2 gap-4">
+            <div class="grid grid-cols-1 gap-6">
                 <div>
                     <label class="input-label">First Name</label>
                     <input type="text" placeholder="John" class="auth-input">
@@ -129,6 +129,13 @@
                 </div>
             </div>
 
+            <div class="flex items-start space-x-3 pt-2">
+                <input type="checkbox" id="terms" required class="mt-1 w-4 h-4 rounded border-slate-200 dark:border-white/10 bg-white dark:bg-dark text-primary focus:ring-primary accent-primary cursor-pointer">
+                <label for="terms" class="text-xs text-slate-500 leading-relaxed cursor-pointer">
+                    I agree to the <a href="#" class="text-primary hover:underline">Terms & Conditions</a> and <a href="#" class="text-primary hover:underline">Privacy Policy</a>
+                </label>
+            </div>
+
             <div class="pt-4">
                 <button class="w-full py-5 bg-primary text-white font-black text-sm uppercase tracking-[0.2em] btn-cta">
                     Register to Studio
@@ -157,10 +164,10 @@
                     <span class="text-[10px] font-black uppercase tracking-widest text-slate-600 dark:text-slate-300">Google</span>
                 </button>
                 <button class="flex items-center justify-center space-x-3 py-4 border border-slate-100 dark:border-white/10 rounded hover:bg-slate-50 dark:hover:bg-white/5 transition-all group">
-                    <svg class="w-5 h-5 text-[#1877F2]" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M17.05 20.28c-.96.95-2.12 1.72-3.46 1.72-1.31 0-1.74-.79-3.29-.79-1.57 0-2.07.77-3.26.77-1.31 0-2.39-.73-3.34-1.72C1.72 18.28 0 15.17 0 12.18c0-3.13 1.96-5.32 4.13-5.32 1.13 0 2.02.66 3.01.66 1.01 0 1.54-.68 3.12-.68 1.99 0 3.86 1.34 4.7 2.61-3.66 1.5-3.08 6.54.49 8.35v.48zM12.03 4.1c0-2.26 1.84-4.1 4.12-4.1.04 0 .09 0 .13.01C16.2 2.3 14.36 4.14 12.08 4.14c-.03 0-.05 0-.05-.04z"/>
                     </svg>
-                    <span class="text-[10px] font-black uppercase tracking-widest text-slate-600 dark:text-slate-300">Facebook</span>
+                    <span class="text-[10px] font-black uppercase tracking-widest text-slate-600 dark:text-slate-300">Apple</span>
                 </button>
             </div>
         </div>

@@ -31,7 +31,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
                 <!-- Logo -->
-                <div class="w-1/4">
+                <div class="flex-shrink-0">
                     <a href="index.html" class="flex items-center space-x-2 group w-fit">
                         <div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
                             <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" /></svg>
@@ -41,21 +41,21 @@
                 </div>
 
                 <!-- Desktop Menu (Centered) -->
-                <div class="hidden lg:flex flex-grow justify-center">
-                    <div class="flex space-x-8 text-sm font-medium">
+                <div class="hidden lg:flex flex-grow justify-center px-4">
+                    <div class="flex lg:space-x-4 xl:space-x-8 text-sm font-medium">
                         <a href="index.html" class="hover:text-primary transition-colors">Home 1</a>
                         <a href="home-2.html" class="hover:text-primary transition-colors">Home 2</a>
                         <a href="about.html" class="hover:text-primary transition-colors">About</a>
                         <a href="portfolio.html" class="hover:text-primary transition-colors">Portfolio</a>
                         <a href="services.html" class="hover:text-primary transition-colors">Services</a>
-                        <a href="dashboard.html" class="hover:text-primary transition-colors">Dashboard</a>
                         <a href="contact.html" class="text-primary font-bold">Contact</a>
+                        <a href="dashboard.html" class="hover:text-primary transition-colors">Dashboard</a>
                     </div>
                 </div>
                 
                 <!-- Right Side Buttons -->
-                <div class="flex items-center justify-end space-x-4 w-1/4">
-                    <div class="hidden lg:flex items-center space-x-4 border-l border-slate-200 dark:border-white/10 pl-6">
+                <div class="flex items-center justify-end flex-shrink-0">
+                    <div class="hidden lg:flex items-center lg:space-x-3 xl:space-x-4 border-l border-slate-200 dark:border-white/10 lg:pl-4 xl:pl-6">
                         <button onclick="toggleTheme()" class="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-white/10 transition-colors">
                             <svg class="w-5 h-5 dark:hidden" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
                             <svg class="w-5 h-5 hidden dark:block" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" /></svg>
@@ -65,15 +65,20 @@
                     </div>
                     <!-- Mobile Toggle -->
                     <div class="lg:hidden flex items-center space-x-4">
-                        <button onclick="toggleTheme()" class="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-white/10 transition-colors">
-                             <svg class="w-5 h-5 dark:hidden" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
-                             <svg class="w-5 h-5 hidden dark:block" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" /></svg>
-                        </button>
                         <button onclick="toggleMobileMenu()" class="p-2 text-slate-900 dark:text-white"><svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" /></svg></button>
                     </div>
                 </div>
             </div>
-            </div>
+        </div>
+
+        <!-- Fixed Mobile Utilities -->
+        <div class="lg:hidden fixed top-4 right-20 z-[60] flex items-center space-x-2 rtl:space-x-reverse">
+            <button onclick="toggleTheme()" class="w-10 h-10 flex items-center justify-center rounded-xl bg-white/80 dark:bg-dark/80 backdrop-blur-md border border-slate-200 dark:border-white/10 shadow-lg transition-all active:scale-95" title="Toggle Theme">
+                <svg class="w-5 h-5 dark:hidden" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+                <svg class="w-5 h-5 hidden dark:block text-primary" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+            </button>
+            <button onclick="toggleRTL()" class="w-10 h-10 flex items-center justify-center rounded-xl bg-white/80 dark:bg-dark/80 backdrop-blur-md border border-slate-200 dark:border-white/10 shadow-lg text-[10px] font-black uppercase transition-all active:scale-95" title="Toggle RTL">RTL</button>
+        </div>
         </div>
         <!-- Mobile Menu Panel -->
         <div id="mobile-menu" class="hidden lg:hidden bg-white dark:bg-dark-soft border-b border-slate-200 dark:border-white/10 animate-fade-in-down">
@@ -83,99 +88,109 @@
                 <a href="about.html" class="block">About</a>
                 <a href="portfolio.html" class="block">Portfolio</a>
                 <a href="services.html" class="block">Services</a>
-                <a href="dashboard.html" class="block">Dashboard</a>
                 <a href="contact.html" class="block text-primary font-bold">Contact</a>
+                <a href="dashboard.html" class="block">Dashboard</a>
             </div>
         </div>
     </nav>
 
-    <!-- Contact Section -->
-    <section class="pt-40 pb-20">
-        <div class="max-w-7xl mx-auto px-4">
-            <div class="grid lg:grid-cols-2 gap-20 items-center mb-20">
+    <!-- Hero Section -->
+    <section class="pt-32 pb-16 overflow-hidden bg-slate-50 dark:bg-dark-soft/30">
+        <div class="max-w-7xl mx-auto px-4 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
                 <div class="reveal">
-                    <h1 class="text-5xl lg:text-7xl font-display font-black mb-8 leading-tight">Let's Wrap Up <br>Your <span class="text-primary">Next Project.</span></h1>
-                    <p class="text-xl text-slate-500 max-w-2xl leading-relaxed">Whether you're a startup looking for your first box or a global brand needing a fresh shelf perspective, we're ready to help.</p>
+                    <h1 class="text-4xl lg:text-6xl font-display font-black mb-6 leading-tight">Let's Wrap Up <br>Your <span class="text-primary">Next Project.</span></h1>
+                    <p class="text-lg text-slate-500 leading-relaxed mb-6">Whether you're a startup looking for your first box or a global brand needing a fresh shelf perspective, we're ready to help you win the impact game.</p>
                 </div>
                 <div class="relative reveal delay-200">
-                    <div class="absolute -inset-4 bg-primary/10 rounded-[3rem] blur-2xl"></div>
-                    <img src="packaging_contact_hero_1778308679176.png" alt="Get in Touch" class="w-full h-[400px] object-cover rounded-[3rem] shadow-2xl relative z-10 border-4 border-white dark:border-dark-soft">
+                    <div class="absolute -inset-8 bg-primary/20 rounded-full blur-[100px] -z-10 animate-pulse"></div>
+                    <img src="packaging_showcase_hero_1778308620125.png" alt="Contact Hero" class="w-full h-[350px] object-cover rounded-[2.5rem] shadow-2xl relative z-10">
                 </div>
             </div>
-            <div class="grid lg:grid-cols-2 gap-20">
-                    
-                    <div class="space-y-8">
-                        <div class="flex items-center space-x-6 rtl:space-x-reverse">
-                            <div class="w-14 h-14 bg-slate-100 dark:bg-white/5 rounded-2xl flex items-center justify-center text-primary">
-                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
+        </div>
+    </section>
+
+    <!-- Contact Details & Form Section -->
+    <section class="py-16">
+        <div class="max-w-7xl mx-auto px-4 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-20 items-start">
+                <div class="reveal">
+                    <div class="space-y-8 mb-12">
+                        <!-- Email -->
+                        <div class="flex items-start space-x-6">
+                            <div class="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center text-primary shrink-0">
+                                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
                             </div>
                             <div>
-                                <h4 class="font-bold">Email Us</h4>
+                                <h4 class="font-bold text-lg mb-1">Email Us</h4>
                                 <p class="text-slate-500">hello@wraptdesign.com</p>
                             </div>
                         </div>
-                        <div class="flex items-center space-x-6 rtl:space-x-reverse">
-                            <div class="w-14 h-14 bg-slate-100 dark:bg-white/5 rounded-2xl flex items-center justify-center text-secondary">
-                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
+                        <!-- Call -->
+                        <div class="flex items-start space-x-6">
+                            <div class="w-14 h-14 bg-secondary/10 rounded-2xl flex items-center justify-center text-secondary shrink-0">
+                                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
                             </div>
                             <div>
-                                <h4 class="font-bold">Call Us</h4>
+                                <h4 class="font-bold text-lg mb-1">Call Us</h4>
                                 <p class="text-slate-500">+1 (555) 234-5678</p>
                             </div>
                         </div>
-                        <div class="flex items-center space-x-6 rtl:space-x-reverse">
-                            <div class="w-14 h-14 bg-slate-100 dark:bg-white/5 rounded-2xl flex items-center justify-center text-accent">
-                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+                        <!-- Studio -->
+                        <div class="flex items-start space-x-6">
+                            <div class="w-14 h-14 bg-accent/10 rounded-2xl flex items-center justify-center text-accent shrink-0">
+                                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
                             </div>
                             <div>
-                                <h4 class="font-bold">Studio</h4>
-                                <p class="text-slate-500">123 Creative Ave, Design District <br>London, UK</p>
+                                <h4 class="font-bold text-lg mb-1">Studio</h4>
+                                <p class="text-slate-500">Design District, London, UK</p>
                             </div>
                         </div>
                     </div>
 
-                    <div class="mt-12 flex space-x-4 rtl:space-x-reverse">
-                        <a href="#" class="w-12 h-12 bg-slate-900 text-white rounded-full flex items-center justify-center hover:bg-primary transition-all">
-                             <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.03l4.826 6.389 5.388-6.389zM17.082 19.77h1.833L7.084 4.126H5.117L17.082 19.77z"/>
-                             </svg>
+                    <!-- Social Links -->
+                    <div class="flex space-x-5">
+                        <a href="#" class="w-12 h-12 bg-slate-900 text-white rounded-full flex items-center justify-center hover:bg-primary transition-all hover:-translate-y-1">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.03l4.826 6.389 5.388-6.389zM17.082 19.77h1.833L7.084 4.126H5.117L17.082 19.77z"/></svg>
                         </a>
-                        <a href="#" class="w-12 h-12 bg-slate-900 text-white rounded-full flex items-center justify-center hover:bg-primary transition-all">
-                             <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.166.054 1.791.248 2.212.412.557.216.953.473 1.37.89.417.417.674.814.89 1.37.164.421.358 1.046.412 2.212.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.054 1.166-.248 1.791-.412 2.212-.216.557-.473.953-.89 1.37-.417.417-.814.674-1.37.89-.421.164-1.046.358-2.212.412-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.166-.054-1.791-.248-2.212-.412-.557-.216-.953-.473-1.37-.89-.417-.417-.674-.814-.89-1.37-.164-.421-.358-1.046-.412-2.212-.058-1.266-.07-1.646-.07-4.85s.012-3.584.07-4.85c.054-1.166.248-1.791.412-2.212.216-.557.473-.953.89-1.37.417-.417.814-.674 1.37-.89.421-.164 1.046-.358 2.212-.412 1.266-.058 1.646-.07 4.85-.07zm0-2.163c-3.259 0-3.667.014-4.947.072-1.277.057-2.151.26-2.915.557-.79.307-1.459.718-2.125 1.385-.667.666-1.078 1.335-1.385 2.125-.297.764-.5 1.638-.557 2.915-.058 1.28-.072 1.688-.072 4.947s.014 3.667.072 4.947c.057 1.277.26 2.151.557 2.915.307.79.718 1.459 1.385 2.125.666.667 1.335 1.078 2.125 1.385.764.297 1.638.5 2.915.557 1.28.058 1.688.072 4.947.072s3.667-.014 4.947-.072c1.277-.057 2.151-.26 2.915-.557.79-.307 1.459-.718 2.125-1.385.667-.666-1.078-1.335-1.385-2.125.297-.764.5-1.638.557-2.915.058-1.28.072-1.688.072-4.947s-.014-3.667-.072-4.947c-.057-1.277-.26-2.151-.557-2.915-.307-.79-.718-1.459-1.385-2.125-.666-.667-1.335-1.078-2.125-1.385-.764-.297-1.638-.5-2.915-.557-1.28-.058-1.688-.072-4.947-.072zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.791-4-4s1.791-4 4-4 4 1.791 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-                             </svg>
+                        <a href="#" class="w-12 h-12 bg-slate-900 text-white rounded-full flex items-center justify-center hover:bg-primary transition-all hover:-translate-y-1">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.166.054 1.791.248 2.212.412.557.216.953.473 1.37.89.417.417.674.814.89 1.37.164.421.358 1.046.412 2.212.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.054 1.166-.248 1.791-.412 2.212-.216.557-.473.953-.89 1.37-.417.417-.814.674-1.37.89-.421.164-1.046.358-2.212.412-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.166-.054-1.791-.248-2.212-.412-.557-.216-.953-.473-1.37-.89-.417-.417-.674-.814-.89-1.37-.164-.421-.358-1.046-.412-2.212-.058-1.266-.07-1.646-.07-4.85s.012-3.584.07-4.85c.054-1.166.248-1.791.412-2.212.216-.557.473-.953.89-1.37.417-.417.814-.674 1.37-.89.421-.164 1.046-.358 2.212-.412 1.266-.058 1.646-.07 4.85-.07zm0-2.163c-3.259 0-3.667.014-4.947.072-1.277.057-2.151.26-2.915.557-.79.307-1.459.718-2.125 1.385-.667.666-1.078 1.335-1.385 2.125-.297.764-.5 1.638-.557 2.915-.058 1.28-.072 1.688-.072 4.947s.014 3.667.072 4.947c.057 1.277.26 2.151.557 2.915.307.79.718 1.459 1.385 2.125.666.667 1.335 1.078 2.125 1.385.764.297 1.638.5 2.915.557 1.28.058 1.688.072 4.947.072s3.667-.014 4.947-.072c1.277-.057 2.151-.26 2.915-.557.79-.307 1.459-.718 2.125-1.385.667-.666-1.078-1.335-1.385-2.125.297-.764.5-1.638.557-2.915.058-1.28.072-1.688.072-4.947s-.014-3.667-.072-4.947c-.057-1.277-.26-2.151-.557-2.915-.307-.79-.718-1.459-1.385-2.125-.666-.667-1.335-1.078-2.125-1.385-.764-.297-1.638-.5-2.915-.557-1.28-.058-1.688-.072-4.947-.072zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.791-4-4s1.791-4 4-4 4 1.791 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
                         </a>
                     </div>
                 </div>
 
-                <!-- Form -->
-                <div class="reveal delay-200">
-                    <div class="bg-slate-50 dark:bg-dark-soft p-10 rounded-[3rem] border border-slate-100 dark:border-white/5">
+                <div class="reveal delay-400">
+                    <div class="bg-slate-50 dark:bg-dark-soft p-8 lg:p-10 rounded-[2.5rem] border border-slate-100 dark:border-white/5 shadow-2xl">
                         <form class="space-y-6">
-                            <div class="grid md:grid-cols-2 gap-6">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 <div class="space-y-2">
-                                    <label class="text-sm font-bold ml-2">Name</label>
-                                    <input type="text" placeholder="John Doe" class="w-full px-6 py-4 bg-white dark:bg-dark border border-slate-200 dark:border-white/10 rounded-2xl focus:outline-none focus:border-primary">
+                                    <label class="text-xs font-black uppercase tracking-widest ml-2 text-slate-500">Full Name</label>
+                                    <input type="text" placeholder="John Doe" class="w-full px-6 py-4 bg-white dark:bg-dark border border-slate-200 dark:border-white/10 rounded-[1.5rem] focus:outline-none focus:border-primary transition-all text-base">
                                 </div>
                                 <div class="space-y-2">
-                                    <label class="text-sm font-bold ml-2">Email</label>
-                                    <input type="email" placeholder="john@example.com" class="w-full px-6 py-4 bg-white dark:bg-dark border border-slate-200 dark:border-white/10 rounded-2xl focus:outline-none focus:border-primary">
+                                    <label class="text-xs font-black uppercase tracking-widest ml-2 text-slate-500">Email Address</label>
+                                    <input type="email" placeholder="john@example.com" class="w-full px-6 py-4 bg-white dark:bg-dark border border-slate-200 dark:border-white/10 rounded-[1.5rem] focus:outline-none focus:border-primary transition-all text-base">
                                 </div>
                             </div>
                             <div class="space-y-2">
-                                <label class="text-sm font-bold ml-2">Project Type</label>
-                                <select class="w-full px-6 py-4 bg-white dark:bg-dark border border-slate-200 dark:border-white/10 rounded-2xl focus:outline-none focus:border-primary appearance-none">
-                                    <option>New Packaging Design</option>
-                                    <option>Redesign Project</option>
-                                    <option>Structural / Dieline Only</option>
-                                    <option>Full Branding</option>
-                                </select>
+                                <label class="text-xs font-black uppercase tracking-widest ml-2 text-slate-500">Project Type</label>
+                                <div class="relative">
+                                    <select class="w-full px-6 py-4 bg-white dark:bg-dark border border-slate-200 dark:border-white/10 rounded-[1.5rem] focus:outline-none focus:border-primary appearance-none transition-all text-base">
+                                        <option>New Packaging Design</option>
+                                        <option>Redesign Project</option>
+                                        <option>Structural / Dieline Only</option>
+                                        <option>Full Branding</option>
+                                    </select>
+                                    <div class="absolute right-6 top-1/2 -translate-y-1/2 pointer-events-none">
+                                        <svg class="w-5 h-5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+                                    </div>
+                                </div>
                             </div>
                             <div class="space-y-2">
-                                <label class="text-sm font-bold ml-2">Message</label>
-                                <textarea rows="4" placeholder="Tell us about your brand..." class="w-full px-6 py-4 bg-white dark:bg-dark border border-slate-200 dark:border-white/10 rounded-2xl focus:outline-none focus:border-primary"></textarea>
+                                <label class="text-xs font-black uppercase tracking-widest ml-2 text-slate-500">Message</label>
+                                <textarea rows="4" placeholder="Tell us about your brand vision..." class="w-full px-6 py-4 bg-white dark:bg-dark border border-slate-200 dark:border-white/10 rounded-[1.5rem] focus:outline-none focus:border-primary transition-all text-base"></textarea>
                             </div>
-                            <button class="w-full py-5 bg-primary text-white rounded-2xl font-black text-xl btn-cta">SEND INQUIRY</button>
+                            <button class="w-full py-5 bg-primary text-white rounded-[1.5rem] font-black text-xl btn-cta tracking-tight">SEND INQUIRY</button>
                         </form>
                     </div>
                 </div>
@@ -183,14 +198,46 @@
         </div>
     </section>
 
-    <!-- Map Section -->
-    <section class="py-20 max-w-7xl mx-auto px-4 reveal">
-        <div class="h-96 bg-slate-200 dark:bg-dark-soft rounded-[3rem] relative overflow-hidden">
-            <div class="absolute inset-0 bg-[url('https://api.maptiler.com/maps/basic-v2/static/-0.1276,51.5072,12/1200x600.png?key=get_your_own_key')] bg-cover bg-center opacity-50 dark:opacity-20 grayscale"></div>
-            <div class="absolute inset-0 flex items-center justify-center">
-                 <div class="w-12 h-12 bg-primary rounded-full animate-ping absolute"></div>
-                 <div class="w-6 h-6 bg-primary rounded-full relative z-10 border-4 border-white"></div>
+    <!-- FAQ Section -->
+    <section class="py-16 bg-white dark:bg-dark">
+        <div class="max-w-7xl mx-auto px-4 lg:px-8">
+            <div class="text-center mb-12 reveal">
+                <h2 class="text-3xl lg:text-4xl font-display font-bold mb-4">Common Inquiries</h2>
+                <p class="text-slate-500 max-w-xl mx-auto text-sm">Quick answers to frequently asked questions about starting a project with Wrapt.</p>
             </div>
+            
+            <div class="max-w-4xl mx-auto grid gap-6">
+                <!-- FAQ 1 -->
+                <div class="p-8 bg-slate-50 dark:bg-dark-soft rounded-3xl border border-slate-100 dark:border-white/5 reveal">
+                    <h4 class="text-xl font-bold mb-3">How long does a typical project take?</h4>
+                    <p class="text-slate-600 dark:text-slate-400">Timelines vary depending on complexity, but most structural and graphic design projects are completed within 2-4 weeks from discovery to final delivery.</p>
+                </div>
+                <!-- FAQ 2 -->
+                <div class="p-8 bg-slate-50 dark:bg-dark-soft rounded-3xl border border-slate-100 dark:border-white/5 reveal delay-100">
+                    <h4 class="text-xl font-bold mb-3">Do you handle print production?</h4>
+                    <p class="text-slate-600 dark:text-slate-400">While we focus on design and 3D mockups, we provide print-ready files and can recommend trusted production partners to ensure your design translates perfectly to the final product.</p>
+                </div>
+                <!-- FAQ 3 -->
+                <div class="p-8 bg-slate-50 dark:bg-dark-soft rounded-3xl border border-slate-100 dark:border-white/5 reveal delay-200">
+                    <h4 class="text-xl font-bold mb-3">What are your project rates?</h4>
+                    <p class="text-slate-600 dark:text-slate-400">We offer competitive project-based pricing tailored to your specific needs. Contact us with your project details for a custom quote within 24 hours.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="py-12 max-w-7xl mx-auto px-4 reveal">
+        <div class="h-[400px] bg-slate-200 dark:bg-dark-soft rounded-[2.5rem] relative overflow-hidden shadow-2xl border border-slate-100 dark:border-white/5">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2484.712662056291!2d0.0006325769165487669!3d51.49101681197711!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8a9019623e1f3%3A0xc331215b4971c26!2sDesign%20District!5e0!3m2!1sen!2suk!4v1715264000000!5m2!1sen!2suk" 
+                class="w-full h-full grayscale dark:invert dark:hue-rotate-180 opacity-80" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+            <div class="absolute inset-0 pointer-events-none border-[20px] border-white/10 dark:border-dark/10 rounded-[3rem]"></div>
         </div>
     </section>
 
@@ -209,19 +256,25 @@
                     </a>
                     <p class="text-slate-400 mb-6">Premium packaging design for brands that want to stand out and stay ahead.</p>
                     <div class="flex space-x-4 rtl:space-x-reverse">
-                        <a href="#" class="w-10 h-10 bg-white/5 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
+                        <a href="#"
+                            class="w-10 h-10 bg-white/5 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
                             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M21 16.5c0 .38-.21.78-.53 1.02-.31.23-.78.37-1.22.37h-3.5v-2.78h3.5c.44 0 .91.14 1.22.37.32.24.53.64.53 1.02zm-1.22-4.38c.31.23.53.64.53 1.02s-.21.78-.53 1.02c-.31.23-.78.37-1.22.37h-3.5v-2.78h3.5c.44 0 .91.14 1.22.37zM24 13c0 2.22-1.78 4.01-3.98 4.01h-5.02V8.99h5.02c2.2 0 3.98 1.79 3.98 4.01zm-13 3.5c0 .38-.21.78-.53 1.02-.31.23-.78.37-1.22.37H5.75v-2.78h3.5c.44 0 .91.14 1.22.37.32.24.53.64.53 1.02zm-1.22-4.38c.31.23.53.64.53 1.02s-.21.78-.53 1.02c-.31.23-.78.37-1.22.37H5.75v-2.78h3.5c.44 0 .91.14 1.22.37zM14 13c0 2.22-1.78 4.01-3.98 4.01H5V8.99h5.02c2.2 0 3.98 1.79 3.98 4.01zM21 7h-5v1.25h5V7z" />
+                                <path
+                                    d="M22,7H15V5h7V7z M12.44,14.5c0.06,1.41,1.25,2.52,2.72,2.52c1.24,0,2.11-0.6,2.48-1.58h2.32c-0.52,2.26-2.53,3.56-4.8,3.56c-3.1,0-5.16-2.1-5.16-5.5s2.06-5.5,5.16-5.5c2.31,0,4.25,1.26,4.79,3.52h-2.31c-0.38-0.99-1.25-1.54-2.48-1.54c-1.47,0-2.66,1.11-2.72,2.52h5.02v0.48h-5.02V14.5z M12.5,13.5h4.9c-0.11-1.18-1.05-2.02-2.45-2.02C13.55,11.48,12.61,12.32,12.5,13.5z M2.5,11h3c1.5,0,2.5-0.5,2.5-2s-1-2-2.5-2h-3V11z M2.5,13v4h3.5c1.5,0,2.5-0.5,2.5-2s-1-2-2.5-2H2.5z M0,5h6c2.5,0,4.5,1.5,4.5,3.5c0,1.2-0.5,2.1-1.4,2.8c0.9,0.7,1.4,1.6,1.4,2.8c0,2-2,3.5-4.5,3.5H0V5z" />
                             </svg>
                         </a>
-                        <a href="#" class="w-10 h-10 bg-white/5 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
+                        <a href="#"
+                            class="w-10 h-10 bg-white/5 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
                             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.166.054 1.791.248 2.212.412.557.216.953.473 1.37.89.417.417.674.814.89 1.37.164.421.358 1.046.412 2.212.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.054 1.166-.248 1.791-.412 2.212-.216.557-.473.953-.89 1.37-.417.417-.814.674-1.37.89-.421.164-1.046.358-2.212.412-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.166-.054-1.791-.248-2.212-.412-.557-.216-.953-.473-1.37-.89-.417-.417-.674-.814-.89-1.37-.164-.421-.358-1.046-.412-2.212-.058-1.266-.07-1.646-.07-4.85s.012-3.584.07-4.85c.054-1.166.248-1.791.412-2.212.216-.557.473-.953.89-1.37.417-.417.814-.674 1.37-.89.421-.164 1.046-.358 2.212-.412 1.266-.058 1.646-.07 4.85-.07zm0-2.163c-3.259 0-3.667.014-4.947.072-1.277.057-2.151.26-2.915.557-.79.307-1.459.718-2.125 1.385-.667.666-1.078 1.335-1.385 2.125-.297.764-.5 1.638-.557 2.915-.058 1.28-.072 1.688-.072 4.947s.014 3.667.072 4.947c.057 1.277.26 2.151.557 2.915.307.79.718 1.459 1.385 2.125.666.667 1.335 1.078 2.125 1.385.764.297 1.638.5 2.915.557 1.28.058 1.688.072 4.947.072s3.667-.014 4.947-.072c1.277-.057 2.151-.26 2.915-.557.79-.307 1.459-.718 2.125-1.385.667-.666-1.078-1.335-1.385-2.125.297-.764.5-1.638.557-2.915.058-1.28.072-1.688.072-4.947s-.014-3.667-.072-4.947c-.057-1.277-.26-2.151-.557-2.915-.307-.79-.718-1.459-1.385-2.125-.666-.667-1.335-1.078-2.125-1.385-.764-.297-1.638-.5-2.915-.557-1.28-.058-1.688-.072-4.947-.072zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.791-4-4s1.791-4 4-4 4 1.791 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                                <path
+                                    d="M12,2.163c3.204,0,3.584,0.012,4.85,0.07c1.166,0.054,1.791,0.248,2.212,0.412c0.557,0.216,0.953,0.473,1.37,0.89c0.417,0.417,0.674,0.814,0.89,1.37c0.164,0.421,0.358,1.046,0.412,2.212c0.058,1.266,0.07,1.646,0.07,4.85s-0.012,3.584-0.07,4.85c-0.054,1.166-0.248,1.791-0.412,2.212c-0.216,0.557-0.473,0.953-0.89,1.37c-0.417,0.417-0.814,0.674-1.37,0.89c-0.421,0.164-1.046,0.358-2.212,0.412c-1.266,0.058-1.646,0.07-4.85,0.07s-3.584-0.012-4.85-0.07c-1.166-0.054-1.791-0.248-2.212-0.412-0.557-0.216-0.953-0.473-1.37-0.89c-0.417-0.417-0.674-0.814-0.89-1.37c-0.164-0.421-0.358-1.046-0.412-2.212c-0.058-1.266-0.07-1.646-0.07-4.85s0.012-3.584,0.07-4.85c0.054-1.166,0.248-1.791,0.412-2.212c0.216-0.557,0.473-0.953,0.89-1.37c0.417-0.417,0.814-0.674,1.37-0.89c0.421-0.164,1.046-0.358,2.212-0.412C8.416,2.175,8.796,2.163,12,2.163 M12,0C8.741,0,8.333,0.014,7.053,0.072C5.775,0.129,4.901,0.332,4.137,0.629C3.348,0.936,2.68,1.347,2.015,2.012C1.35,2.677,0.939,3.345,0.632,4.134C0.334,4.898,0.132,5.772,0.075,7.051C0.017,8.33,0.003,8.739,0.003,11.997c0,3.258,0.014,3.667,0.072,4.947c0.057,1.278,0.26,2.152,0.557,2.916c0.307,0.789,0.718,1.458,1.383,2.123c0.665,0.665,1.334,1.076,2.122,1.383c0.764,0.297,1.638,0.5,2.915,0.557c1.28,0.058,1.689,0.072,4.948,0.072s3.668-0.014,4.948-0.072c1.277-0.057,2.151-0.26,2.915-0.557c0.789-0.307,1.459-0.718,2.123-1.383c0.665-0.665,1.076-1.334,1.383-2.122c0.297-0.764,0.5-1.638,0.557-2.915c0.058-1.28,0.072-1.689,0.072-4.948s-0.014-3.668-0.072-4.948c-0.057-1.277-0.26-2.151-0.557-2.915c-0.307-0.789-0.718-1.459-1.383-2.123c-0.665-0.665-1.334-1.076-2.123-1.383c-0.764-0.297-1.638-0.5-2.915-0.557C15.667,0.014,15.258,0,12,0L12,0z M12,5.838c-3.403,0-6.162,2.759-6.162,6.162c0,3.403,2.759,6.162,6.162,6.162s6.162-2.759,6.162-6.162C18.162,8.597,15.403,5.838,12,5.838L12,5.838z M12,16.162c-2.3,0-4.162-1.862-4.162-4.162c0-2.3,1.862-4.162,4.162-4.162s4.162,1.862,4.162,4.162C16.162,14.3,14.3,16.162,12,16.162L12,16.162z M18.406,4.154c-0.796,0-1.441,0.645-1.441,1.44s0.645,1.44,1.441,1.44c0.795,0,1.439-0.645,1.439-1.44S19.201,4.154,18.406,4.154L18.406,4.154z" />
                             </svg>
                         </a>
-                        <a href="#" class="w-10 h-10 bg-white/5 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
+                        <a href="#"
+                            class="w-10 h-10 bg-white/5 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
                             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.761 0 5-2.239 5-5v-14c0-2.761-2.239-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                                <path
+                                    d="M19,0H5C2.239,0,0,2.239,0,5v14c0,2.761,2.239,5,5,5h14c2.761,0,5-2.239,5-5V5C24,2.239,21.761,0,19,0z M8,19H5V8h3V19z M6.5,6.732c-0.966,0-1.75-0.784-1.75-1.75s0.784-1.75,1.75-1.75s1.75,0.784,1.75,1.75S7.466,6.732,6.5,6.732z M20,19h-3v-5.604 c0-3.368-4-3.113-4,0V19h-3V8h3v1.765c1.396-2.586,7-2.777,7-2.476V19z" />
                             </svg>
                         </a>
                     </div>
