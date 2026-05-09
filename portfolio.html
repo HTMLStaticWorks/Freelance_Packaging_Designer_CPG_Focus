@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Wrapt Packaging Design</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#FF4D00',
+                        secondary: '#00F5FF',
+                        accent: '#FF00FF',
+                        dark: '#121212'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-white dark:bg-dark text-slate-900 dark:text-white transition-colors duration-300">
+
+    <!-- Navbar -->
+    <nav class="fixed top-0 w-full z-50 bg-white/80 dark:bg-dark/80 backdrop-blur-lg border-b border-slate-200 dark:border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="w-1/4">
+                    <a href="index.html" class="flex items-center space-x-2 group w-fit">
+                        <div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center transform group-hover:rotate-12 transition-transform duration-300">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" /></svg>
+                        </div>
+                        <span class="text-2xl font-display font-bold tracking-tight">WRAPT</span>
+                    </a>
+                </div>
+
+                <!-- Desktop Menu (Centered) -->
+                <div class="hidden lg:flex flex-grow justify-center">
+                    <div class="flex space-x-8 text-sm font-medium">
+                        <a href="index.html" class="hover:text-primary transition-colors">Home 1</a>
+                        <a href="home-2.html" class="hover:text-primary transition-colors">Home 2</a>
+                        <a href="about.html" class="hover:text-primary transition-colors">About</a>
+                        <a href="portfolio.html" class="text-primary font-bold">Portfolio</a>
+                        <a href="services.html" class="hover:text-primary transition-colors">Services</a>
+                        <a href="dashboard.html" class="hover:text-primary transition-colors">Dashboard</a>
+                        <a href="contact.html" class="hover:text-primary transition-colors">Contact</a>
+                    </div>
+                </div>
+                
+                <!-- Right Side Buttons -->
+                <div class="flex items-center justify-end space-x-4 w-1/4">
+                    <div class="hidden lg:flex items-center space-x-4 border-l border-slate-200 dark:border-white/10 pl-6">
+                        <button onclick="toggleTheme()" class="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-white/10 transition-colors">
+                            <svg class="w-5 h-5 dark:hidden" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+                            <svg class="w-5 h-5 hidden dark:block" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" /></svg>
+                        </button>
+                        <button onclick="toggleRTL()" class="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-white/10 transition-colors text-xs font-bold">RTL</button>
+                        <a href="signup.html" class="px-5 py-2.5 bg-primary text-white rounded-full text-sm font-bold btn-cta">Sign up</a>
+                    </div>
+                    <!-- Mobile Toggle -->
+                    <div class="lg:hidden flex items-center space-x-4">
+                        <button onclick="toggleTheme()" class="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-white/10 transition-colors">
+                             <svg class="w-5 h-5 dark:hidden" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+                             <svg class="w-5 h-5 hidden dark:block" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" /></svg>
+                        </button>
+                        <button onclick="toggleMobileMenu()" class="p-2 text-slate-900 dark:text-white"><svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" /></svg></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu Panel -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-white dark:bg-dark-soft border-b border-slate-200 dark:border-white/10 animate-fade-in-down">
+            <div class="px-4 py-6 space-y-4 text-center">
+                <a href="index.html" class="block">Home 1</a>
+                <a href="home-2.html" class="block">Home 2</a>
+                <a href="about.html" class="block">About</a>
+                <a href="portfolio.html" class="block text-primary font-bold">Portfolio</a>
+                <a href="services.html" class="block">Services</a>
+                <a href="dashboard.html" class="block text-primary">Dashboard</a>
+                <a href="contact.html" class="block">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Portfolio Header -->
+    <section class="pt-40 pb-20">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="reveal">
+                    <h1 class="text-5xl lg:text-7xl font-display font-black mb-6">The Showcase</h1>
+                    <p class="text-xl text-slate-500 max-w-2xl leading-relaxed mb-8">A collection of our most impactful packaging designs across various industries.</p>
+                    
+                    <!-- Filters -->
+                    <div class="flex flex-wrap gap-4">
+                        <button class="px-6 py-2 rounded-full bg-primary text-white font-bold btn-cta">All</button>
+                        <button class="px-6 py-2 rounded-full bg-slate-100 dark:bg-white/5 hover:bg-primary hover:text-white transition-all font-bold">Food</button>
+                        <button class="px-6 py-2 rounded-full bg-slate-100 dark:bg-white/5 hover:bg-primary hover:text-white transition-all font-bold">Beverage</button>
+                        <button class="px-6 py-2 rounded-full bg-slate-100 dark:bg-white/5 hover:bg-primary hover:text-white transition-all font-bold">Beauty</button>
+                    </div>
+                </div>
+                <div class="relative reveal delay-200">
+                    <div class="absolute -inset-4 bg-secondary/10 rounded-[3rem] blur-2xl"></div>
+                    <img src="packaging_showcase_hero_1778308620125.png" alt="Packaging Showcase" class="w-full h-[400px] object-cover rounded-[3rem] shadow-2xl relative z-10">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Grid -->
+    <section class="pb-32 px-4">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Item 1 -->
+            <div class="shelf-impact-card reveal">
+                <div class="relative group overflow-hidden rounded-3xl bg-slate-100 dark:bg-dark-soft">
+                    <img src="assets/hero-coffee.png" class="w-full h-[400px] object-cover">
+                    <div class="absolute inset-0 bg-primary/90 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8 text-white">
+                        <span class="text-xs font-bold uppercase tracking-widest mb-2">Beverage</span>
+                        <h3 class="text-2xl font-black mb-4">Midnight Roast Series</h3>
+                        <p class="text-sm text-white/80 mb-6">Bold typography and matte finishing for a premium coffee experience.</p>
+                        <a href="#" class="inline-block text-sm font-bold underline">View Case Study</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Item 2 -->
+            <div class="shelf-impact-card reveal delay-100">
+                <div class="relative group overflow-hidden rounded-3xl bg-slate-100 dark:bg-dark-soft">
+                    <img src="assets/hero-cosmetic.png" class="w-full h-[400px] object-cover">
+                    <div class="absolute inset-0 bg-secondary/90 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8 text-dark">
+                        <span class="text-xs font-bold uppercase tracking-widest mb-2">Beauty</span>
+                        <h3 class="text-2xl font-black mb-4">Glow Essence</h3>
+                        <p class="text-sm text-dark/80 mb-6">Minimalist glass packaging with sustainable cork closures.</p>
+                        <a href="#" class="inline-block text-sm font-bold underline">View Case Study</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="shelf-impact-card reveal delay-200">
+                <div class="relative group overflow-hidden rounded-3xl bg-slate-100 dark:bg-dark-soft">
+                    <img src="assets/portfolio-snack.png" class="w-full h-[400px] object-cover">
+                    <div class="absolute inset-0 bg-accent/90 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8 text-white">
+                        <span class="text-xs font-bold uppercase tracking-widest mb-2">Food</span>
+                        <h3 class="text-2xl font-black mb-4">Wild Snackers</h3>
+                        <p class="text-sm text-white/80 mb-6">Playful illustrations and vibrant colors for a high-shelf impact.</p>
+                        <a href="#" class="inline-block text-sm font-bold underline">View Case Study</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 4 (Unsplash for variety) -->
+            <div class="shelf-impact-card reveal">
+                <div class="relative group overflow-hidden rounded-3xl bg-slate-100 dark:bg-dark-soft">
+                    <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&q=80&w=600" class="w-full h-[500px] object-cover">
+                    <div class="absolute inset-0 bg-slate-900/90 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8 text-white">
+                        <span class="text-xs font-bold uppercase tracking-widest mb-2">Tech Accessories</span>
+                        <h3 class="text-2xl font-black mb-4">Vector Watch Box</h3>
+                        <p class="text-sm text-white/80 mb-6">Premium unboxing experience with magnetic closure and soft-touch lamination.</p>
+                        <a href="#" class="inline-block text-sm font-bold underline">View Case Study</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 5 -->
+            <div class="shelf-impact-card reveal delay-100">
+                <div class="relative group overflow-hidden rounded-3xl bg-slate-100 dark:bg-dark-soft">
+                    <img src="https://images.unsplash.com/photo-1606787366850-de6330128bfc?auto=format&fit=crop&q=80&w=600" class="w-full h-[500px] object-cover">
+                    <div class="absolute inset-0 bg-primary/90 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8 text-white">
+                        <span class="text-xs font-bold uppercase tracking-widest mb-2">Structural</span>
+                        <h3 class="text-2xl font-black mb-4">Zero-Plastic Tote</h3>
+                        <p class="text-sm text-white/80 mb-6">Innovative honeycomb cardboard structure for heavy product transport.</p>
+                        <a href="#" class="inline-block text-sm font-bold underline">View Case Study</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 6 -->
+            <div class="shelf-impact-card reveal delay-200">
+                <div class="relative group overflow-hidden rounded-3xl bg-slate-100 dark:bg-dark-soft">
+                    <img src="https://images.unsplash.com/photo-1556228578-0d85b1a4d571?auto=format&fit=crop&q=80&w=600" class="w-full h-[500px] object-cover">
+                    <div class="absolute inset-0 bg-secondary/90 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8 text-dark">
+                        <span class="text-xs font-bold uppercase tracking-widest mb-2">Beverage</span>
+                        <h3 class="text-2xl font-black mb-4">Aura Spirits</h3>
+                        <p class="text-sm text-dark/80 mb-6">Gold foil embossing and custom bottle mold design.</p>
+                        <a href="#" class="inline-block text-sm font-bold underline">View Case Study</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Study Banner -->
+    <section class="py-24 bg-dark text-white overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex flex-col lg:flex-row items-center gap-16">
+                <div class="lg:w-1/2 reveal">
+                    <img src="assets/hero-coffee.png" class="rounded-[3rem] shadow-2xl">
+                </div>
+                <div class="lg:w-1/2 reveal delay-200">
+                    <span class="text-primary font-bold tracking-widest uppercase">Featured Case Study</span>
+                    <h2 class="text-4xl lg:text-6xl font-display font-black mt-4 mb-8">Brew & Bloom: A Growth Story</h2>
+                    <p class="text-slate-400 text-lg mb-8 leading-relaxed">How a complete visual and structural redesign led to a 300% increase in retail distribution across three continents.</p>
+                    <a href="#" class="px-8 py-4 bg-primary text-white rounded-full font-bold hover:scale-105 transition-transform inline-block">Read Full Story</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-white pt-20 pb-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                <div class="col-span-1 lg:col-span-1">
+                    <a href="index.html" class="flex items-center space-x-2 mb-6">
+                        <div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
+                            </svg>
+                        </div>
+                        <span class="text-2xl font-display font-bold tracking-tight">WRAPT</span>
+                    </a>
+                    <p class="text-slate-400 mb-6">Premium packaging design for brands that want to stand out and stay ahead.</p>
+                    <div class="flex space-x-4 rtl:space-x-reverse">
+                        <a href="#" class="w-10 h-10 bg-white/5 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M22 7h-7v-2h7v2zm.5 4.5c0 1.933-1.567 3.5-3.5 3.5h-4v-10h4c1.933 0 3.5 1.567 3.5 3.5v3zm-3.5-1.5c.828 0 1.5-.672 1.5-1.5s-.672-1.5-1.5-1.5h-2v3h2zm0 4c.828 0 1.5-.672 1.5-1.5s-.672-1.5-1.5-1.5h-2v3h2zm-12.5-10c-3.59 0-6.5 2.91-6.5 6.5s2.91 6.5 6.5 6.5 6.5-2.91 6.5-6.5-2.91-6.5-6.5-6.5zm0 11c-2.485 0-4.5-2.015-4.5-4.5s2.015-4.5 4.5-4.5 4.5 2.015 4.5 4.5-2.015 4.5-4.5 4.5zm-2-6h4v1h-4v-1z"/></svg>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-white/5 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.166.054 1.791.248 2.212.412.557.216.953.473 1.37.89.417.417.674.814.89 1.37.164.421.358 1.046.412 2.212.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.054 1.166-.248 1.791-.412 2.212-.216.557-.473.953-.89 1.37-.417.417-.814.674-1.37.89-.421.164-1.046.358-2.212.412-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.166-.054-1.791-.248-2.212-.412-.557-.216-.953-.473-1.37-.89-.417-.417-.674-.814-.89-1.37-.164-.421-.358-1.046-.412-2.212-.058-1.266-.07-1.646-.07-4.85s.012-3.584.07-4.85c.054-1.166.248-1.791.412-2.212.216-.557.473-.953.89-1.37.417-.417.814-.674 1.37-.89.421-.164 1.046-.358 2.212-.412 1.266-.058 1.646-.07 4.85-.07zm0-2.163c-3.259 0-3.667.014-4.947.072-1.277.057-2.151.26-2.915.557-.79.307-1.459.718-2.125 1.385-.667.666-1.078 1.335-1.385 2.125-.297.764-.5 1.638-.557 2.915-.058 1.28-.072 1.688-.072 4.947s.014 3.667.072 4.947c.057 1.277.26 2.151.557 2.915.307.79.718 1.459 1.385 2.125.666.667 1.335 1.078 2.125 1.385.764.297 1.638.5 2.915.557 1.28.058 1.688.072 4.947.072s3.667-.014 4.947-.072c1.277-.057 2.151-.26 2.915-.557.79-.307 1.459-.718 2.125-1.385.667-.666-1.078-1.335-1.385-2.125.297-.764.5-1.638.557-2.915.058-1.28.072-1.688.072-4.947s-.014-3.667-.072-4.947c-.057-1.277-.26-2.151-.557-2.915-.307-.79-.718-1.459-1.385-2.125-.666-.667-1.335-1.078-2.125-1.385-.764-.297-1.638-.5-2.915-.557-1.28-.058-1.688-.072-4.947-.072z"/></svg>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-white/5 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.761 0 5-2.239 5-5v-14c0-2.761-2.239-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-bold mb-6">Quick Links</h4>
+                    <ul class="space-y-4 text-slate-400">
+                        <li><a href="about.html" class="hover:text-primary transition-colors">About Us</a></li>
+                        <li><a href="portfolio.html" class="hover:text-primary transition-colors">Portfolio</a></li>
+                        <li><a href="services.html" class="hover:text-primary transition-colors">Services</a></li>
+                        <li><a href="contact.html" class="hover:text-primary transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-bold mb-6">Services</h4>
+                    <ul class="space-y-4 text-slate-400">
+                        <li><a href="#" class="hover:text-primary transition-colors">Structural Design</a></li>
+                        <li><a href="#" class="hover:text-primary transition-colors">Graphic Design</a></li>
+                        <li><a href="#" class="hover:text-primary transition-colors">3D Mockups</a></li>
+                        <li><a href="#" class="hover:text-primary transition-colors">Print Production</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-bold mb-6">Newsletter</h4>
+                    <p class="text-slate-400 mb-4">Get the latest packaging trends and insights.</p>
+                    <form class="flex flex-col space-y-2">
+                        <input type="email" placeholder="Email address" class="px-4 py-3 bg-white/5 border border-white/10 rounded-xl focus:outline-none focus:border-primary">
+                        <button class="px-4 py-3 bg-primary text-white rounded-xl font-bold hover:bg-opacity-90 transition-all">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="border-t border-white/10 pt-10 flex flex-col md:flex-row justify-between items-center text-slate-500 text-sm">
+                <p>&copy; 2026 Wrapt Packaging Studio. All rights reserved.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0 rtl:space-x-reverse">
+                    <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

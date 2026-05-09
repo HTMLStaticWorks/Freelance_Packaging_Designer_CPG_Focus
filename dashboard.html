@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client Dashboard | Wrapt</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#FF4D00',
+                        secondary: '#00F5FF',
+                        dark: '#121212',
+                        'dark-soft': '#1E1E1E'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-slate-50 dark:bg-dark text-slate-900 dark:text-white transition-colors h-screen overflow-hidden">
+
+    <div class="flex rtl:flex-row-reverse h-full relative overflow-hidden">
+        
+        <!-- Mobile Sidebar Overlay (New) -->
+        <div id="mobile-sidebar" class="fixed inset-0 z-[60] lg:hidden hidden">
+            <div class="absolute inset-0 bg-dark/60 backdrop-blur-sm" onclick="toggleDashboardMenu()"></div>
+            <aside class="absolute left-0 rtl:left-auto rtl:right-0 top-0 bottom-0 w-72 bg-white dark:bg-dark-soft shadow-2xl flex flex-col transform -translate-x-full rtl:translate-x-full transition-transform duration-300">
+                <div class="p-8 border-b border-slate-100 dark:border-white/5 flex items-center justify-between rtl:flex-row-reverse">
+                    <a href="index.html" class="flex items-center space-x-3 rtl:space-x-reverse group">
+                        <div class="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
+                            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" /></svg>
+                        </div>
+                        <span class="text-xl font-display font-black tracking-tight">WRAPT</span>
+                    </a>
+                    <button onclick="toggleDashboardMenu()" class="p-2 text-slate-400 hover:text-primary transition-colors">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
+                    </button>
+                </div>
+                <nav class="flex-grow px-6 space-y-2 mt-6 overflow-y-auto">
+                    <!-- Same links as desktop sidebar -->
+                    <a href="#overview" onclick="toggleDashboardMenu()" class="flex items-center space-x-3 rtl:space-x-reverse px-4 py-4 bg-primary/10 text-primary rounded-2xl font-black">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001-1m-6 0h6" /></svg>
+                        <span>Overview</span>
+                    </a>
+                    <a href="#specifications" onclick="toggleDashboardMenu()" class="flex items-center space-x-3 px-4 py-4 text-slate-400 hover:bg-slate-100 dark:hover:bg-white/5 rounded-2xl transition-all font-bold">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
+                        <span>Specifications</span>
+                    </a>
+                    <a href="#approvals" onclick="toggleDashboardMenu()" class="flex items-center space-x-3 px-4 py-4 text-slate-400 hover:bg-slate-100 dark:hover:bg-white/5 rounded-2xl transition-all font-bold">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" /></svg>
+                        <span>Approvals</span>
+                    </a>
+                    <a href="#files" onclick="toggleDashboardMenu()" class="flex items-center space-x-3 px-4 py-4 text-slate-400 hover:bg-slate-100 dark:hover:bg-white/5 rounded-2xl transition-all font-bold">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" /></svg>
+                        <span>Files</span>
+                    </a>
+                    <a href="#vendors" onclick="toggleDashboardMenu()" class="flex items-center space-x-3 px-4 py-4 text-slate-400 hover:bg-slate-100 dark:hover:bg-white/5 rounded-2xl transition-all font-bold">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" /></svg>
+                        <span>Vendor Portal</span>
+                    </a>
+                </nav>
+                <div class="p-6 mt-auto">
+                    <a href="index.html" class="flex items-center justify-center space-x-3 rtl:space-x-reverse w-full py-4 bg-red-50 dark:bg-red-500/10 text-red-500 rounded-2xl text-sm font-black transition-all">
+                        <svg class="w-5 h-5 rtl:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" /></svg>
+                        <span>Logout</span>
+                    </a>
+                </div>
+            </aside>
+        </div>
+
+        <!-- Sidebar (Desktop) -->
+        <aside class="hidden lg:flex flex-col w-72 bg-white dark:bg-dark-soft border-r rtl:border-r-0 rtl:border-l border-slate-200 dark:border-white/5 h-full shrink-0">
+            <div class="p-8">
+                <a href="index.html" class="flex items-center space-x-3 rtl:space-x-reverse group">
+                    <div class="w-10 h-10 bg-primary rounded-xl flex items-center justify-center transform group-hover:rotate-12 transition-transform shadow-lg shadow-primary/20">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" /></svg>
+                    </div>
+                    <span class="text-2xl font-display font-black tracking-tight">WRAPT</span>
+                </a>
+            </div>
+            
+            <nav class="flex-grow px-6 space-y-2 mt-4">
+                <a href="#overview" class="flex items-center space-x-3 px-4 py-4 bg-primary/10 text-primary rounded-2xl font-black transition-all">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001-1m-6 0h6" /></svg>
+                    <span>Overview</span>
+                </a>
+                <a href="#specifications" class="flex items-center space-x-3 px-4 py-4 text-slate-400 hover:bg-slate-100 dark:hover:bg-white/5 rounded-2xl transition-all font-bold">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
+                    <span>Specifications</span>
+                </a>
+                <a href="#approvals" class="flex items-center space-x-3 px-4 py-4 text-slate-400 hover:bg-slate-100 dark:hover:bg-white/5 rounded-2xl transition-all font-bold">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" /></svg>
+                    <span>Review & Approvals</span>
+                </a>
+                <a href="#files" class="flex items-center space-x-3 px-4 py-4 text-slate-400 hover:bg-slate-100 dark:hover:bg-white/5 rounded-2xl transition-all font-bold">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" /></svg>
+                    <span>Production Files</span>
+                </a>
+                <a href="#vendors" class="flex items-center space-x-3 px-4 py-4 text-slate-400 hover:bg-slate-100 dark:hover:bg-white/5 rounded-2xl transition-all font-bold">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" /></svg>
+                    <span>Vendor Portal</span>
+                </a>
+            </nav>
+            
+            <div class="p-6">
+                <a href="index.html" class="flex items-center justify-center space-x-3 rtl:space-x-reverse w-full py-4 bg-slate-100 dark:bg-white/5 text-slate-600 dark:text-slate-400 rounded-2xl text-sm font-black hover:bg-red-50 hover:text-red-500 dark:hover:bg-red-500/10 dark:hover:text-red-500 transition-all group">
+                    <svg class="w-5 h-5 transform group-hover:-translate-x-1 rtl:group-hover:translate-x-1 rtl:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" /></svg>
+                    <span>Logout Studio</span>
+                </a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main id="overview" class="flex-grow overflow-y-auto bg-slate-50 dark:bg-dark flex flex-col relative scroll-smooth">
+            <!-- Header -->
+            <header class="sticky top-0 z-40 bg-white/80 dark:bg-dark/80 backdrop-blur-md px-4 lg:px-10 h-20 lg:h-24 flex items-center justify-between border-b border-slate-200 dark:border-white/5">
+                <div class="flex items-center space-x-4 lg:space-x-0 rtl:space-x-reverse">
+                    <button onclick="toggleDashboardMenu()" class="lg:hidden p-2 text-slate-600 dark:text-white bg-slate-100 dark:bg-white/5 rounded-xl">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" /></svg>
+                    </button>
+                    <div class="max-w-[150px] sm:max-w-[180px] lg:max-w-none">
+                        <h2 class="text-base sm:text-lg lg:text-2xl font-black truncate">Project: <span class="text-primary lg:underline lg:decoration-4 lg:underline-offset-4">Artisanal Coffee</span></h2>
+                        <p class="text-[8px] sm:text-[9px] lg:text-xs text-slate-500 font-bold uppercase tracking-widest mt-0.5 truncate">Status: Active Design</p>
+                    </div>
+                </div>
+                
+                <div class="flex items-center space-x-2 lg:space-x-6 rtl:space-x-reverse">
+                    <div class="flex items-center space-x-1 lg:space-x-2 rtl:space-x-reverse">
+                        <button onclick="toggleTheme()" class="p-2 text-slate-400 hover:text-primary transition-all rounded-full hover:bg-slate-100 dark:hover:bg-white/5" title="Toggle Theme">
+                            <svg class="w-5 h-5 lg:w-6 lg:h-6 dark:hidden" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+                            <svg class="w-5 h-5 lg:w-6 lg:h-6 hidden dark:block" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+                        </button>
+                        <button onclick="toggleRTL()" class="p-1.5 lg:p-2 text-slate-400 hover:text-primary transition-all text-[8px] lg:text-[10px] font-black uppercase tracking-widest rounded-full hover:bg-slate-100 dark:hover:bg-white/5" title="Toggle RTL">RTL</button>
+                        <button class="relative p-2 text-slate-400 hover:text-primary transition-all">
+                            <svg class="w-5 h-5 lg:w-6 lg:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" /></svg>
+                            <span class="absolute top-1.5 right-1.5 lg:top-1 lg:right-1 w-2 h-2 lg:w-2.5 lg:h-2.5 bg-primary border-2 border-white dark:border-dark rounded-full"></span>
+                        </button>
+                    </div>
+                    <div class="flex items-center space-x-2 sm:space-x-3 lg:space-x-4 lg:pl-6 lg:border-l lg:border-slate-200 lg:dark:border-white/10 rtl:space-x-reverse rtl:pl-0 rtl:pr-6 rtl:border-l-0 rtl:border-r">
+                        <div class="hidden sm:block text-right">
+                            <p class="text-[10px] font-black uppercase tracking-widest text-slate-400">Welcome</p>
+                            <p class="text-xs lg:text-sm font-black"> Sarah J. </p>
+                        </div>
+                        <img src="https://i.pravatar.cc/150?u=sarah" class="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 rounded-xl lg:rounded-2xl border-2 border-white dark:border-white/10 shadow-lg" alt="User">
+                    </div>
+                </div>
+            </header>
+
+            <div class="p-4 lg:p-10 space-y-6 lg:space-y-10">
+                <!-- Overview Stats -->
+                <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6">
+                    <div class="bg-white dark:bg-dark-soft p-6 rounded-3xl border border-slate-100 dark:border-white/5 shadow-sm">
+                        <p class="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-2">Project Age</p>
+                        <h4 class="text-2xl font-black">24 <span class="text-xs text-slate-400">Days</span></h4>
+                        <div class="w-full bg-slate-100 dark:bg-dark h-1 rounded-full mt-4 overflow-hidden">
+                            <div class="bg-primary w-2/3 h-full"></div>
+                        </div>
+                    </div>
+                    <div class="bg-white dark:bg-dark-soft p-6 rounded-3xl border border-slate-100 dark:border-white/5 shadow-sm">
+                        <p class="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-2">Active SKUs</p>
+                        <h4 class="text-2xl font-black">12 <span class="text-xs text-slate-400">Items</span></h4>
+                        <p class="text-[10px] text-green-500 font-bold mt-2">+2 added recently</p>
+                    </div>
+                    <div class="bg-white dark:bg-dark-soft p-6 rounded-3xl border border-slate-100 dark:border-white/5 shadow-sm">
+                        <p class="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-2">Studio Hours</p>
+                        <h4 class="text-2xl font-black">86 <span class="text-xs text-slate-400">Hrs</span></h4>
+                        <p class="text-[10px] text-slate-400 font-bold mt-2">Allocated: 120 Hrs</p>
+                    </div>
+                    <div class="bg-primary text-white p-6 rounded-3xl shadow-xl shadow-primary/20">
+                        <p class="text-[10px] font-black text-white/60 uppercase tracking-widest mb-2">Next Milestone</p>
+                        <h4 class="text-xl font-black">Final Proofs</h4>
+                        <p class="text-[10px] font-bold mt-2">Due in 5 Days</p>
+                    </div>
+                </div>
+
+                <!-- Dashboard Grid -->
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-10">
+                    
+                    <!-- Progress & Approvals -->
+                    <div class="lg:col-span-2 space-y-10">
+                        
+                        <!-- Timeline Section -->
+                        <div id="approvals" class="bg-white dark:bg-dark-soft p-6 lg:p-10 rounded-3xl lg:rounded-[3rem] shadow-sm border border-slate-100 dark:border-white/5 relative overflow-hidden">
+                            <div class="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full -mr-16 -mt-16 blur-3xl"></div>
+                            <div class="flex items-center justify-between mb-12">
+                                <h3 class="text-xl lg:text-3xl font-display font-black">Workflow Tracker</h3>
+                                <div class="flex space-x-2">
+                                    <span class="px-4 py-1.5 bg-primary text-white text-[10px] font-black rounded-full uppercase tracking-widest">Active Step</span>
+                                </div>
+                            </div>
+                            
+                            <div class="relative space-y-8 lg:space-y-12 before:absolute before:left-3 rtl:before:left-auto rtl:before:right-3 before:top-4 before:bottom-4 before:w-0.5 before:bg-slate-100 dark:before:bg-white/5">
+                                <!-- Step 1: DONE -->
+                                <div class="relative pl-10 lg:pl-12 rtl:pl-0 rtl:pr-10 lg:rtl:pr-12 group">
+                                    <div class="absolute left-0 top-0 w-6 h-6 bg-green-500 rounded-full border-4 border-white dark:border-dark-soft shadow-lg shadow-green-500/20 flex items-center justify-center text-white">
+                                        <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" /></svg>
+                                    </div>
+                                    <div class="flex justify-between items-start">
+                                        <div>
+                                            <h4 class="font-black text-base lg:text-lg">Product Specs Collection</h4>
+                                            <p class="text-sm text-slate-500 mt-1">All dimensions, ingredients, and barcoding data received.</p>
+                                        </div>
+                                        <span class="text-[9px] font-black text-slate-400 uppercase tracking-widest">APR 20</span>
+                                    </div>
+                                </div>
+
+                                <!-- Step 2: DONE -->
+                                <div class="relative pl-10 lg:pl-12 rtl:pl-0 rtl:pr-10 lg:rtl:pr-12">
+                                    <div class="absolute left-0 top-0 w-6 h-6 bg-green-500 rounded-full border-4 border-white dark:border-dark-soft shadow-lg shadow-green-500/20 flex items-center justify-center text-white">
+                                        <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" /></svg>
+                                    </div>
+                                    <div class="flex justify-between items-start">
+                                        <div>
+                                            <h4 class="font-black text-base lg:text-lg">Structural Dieline Review</h4>
+                                            <p class="text-sm text-slate-500 mt-1">Box structures and material tests approved for 12 SKUs.</p>
+                                        </div>
+                                        <span class="text-[9px] font-black text-slate-400 uppercase tracking-widest">MAY 02</span>
+                                    </div>
+                                </div>
+
+                                <!-- Step 3: ACTIVE -->
+                                <div class="relative pl-10 lg:pl-12 rtl:pl-0 rtl:pr-10 lg:rtl:pr-12">
+                                    <div class="absolute left-0 rtl:left-auto rtl:right-0 top-0 w-6 h-6 bg-primary rounded-full border-4 border-white dark:border-dark-soft shadow-xl shadow-primary/30 animate-pulse"></div>
+                                    <div class="flex justify-between items-start">
+                                        <div>
+                                            <h4 class="font-black text-base lg:text-lg">Mockup Approval Phase</h4>
+                                            <p class="text-sm text-slate-500 mt-1">Visualizing brand identity on the structural forms.</p>
+                                            <div class="mt-6 p-6 bg-slate-50 dark:bg-dark rounded-3xl border border-slate-100 dark:border-white/5 rtl:text-right">
+                                                <div class="flex items-center space-x-4 rtl:space-x-reverse mb-4">
+                                                    <div class="w-12 h-12 bg-white dark:bg-dark-soft rounded-xl shadow-sm overflow-hidden border border-slate-100 dark:border-white/5">
+                                                        <img src="assets/hero-coffee.png" class="w-full h-full object-cover">
+                                                    </div>
+                                                    <div>
+                                                        <p class="text-sm font-black italic">Waiting for your approval</p>
+                                                        <p class="text-xs text-slate-400">Coffee Series V1 - 3 SKU Renders</p>
+                                                    </div>
+                                                </div>
+                                                <div class="grid grid-cols-3 gap-2 mb-4">
+                                                    <div class="aspect-square bg-slate-100 dark:bg-dark rounded-xl overflow-hidden border border-slate-200 dark:border-white/10 group cursor-zoom-in">
+                                                        <img src="assets/hero-coffee.png" class="w-full h-full object-cover group-hover:scale-110 transition-transform">
+                                                    </div>
+                                                    <div class="aspect-square bg-slate-100 dark:bg-dark rounded-xl overflow-hidden border border-slate-200 dark:border-white/10 group cursor-zoom-in">
+                                                        <img src="assets/packaging-grid.png" class="w-full h-full object-cover group-hover:scale-110 transition-transform">
+                                                    </div>
+                                                    <div class="aspect-square bg-slate-100 dark:bg-dark rounded-xl overflow-hidden border border-slate-200 dark:border-white/10 group cursor-zoom-in">
+                                                        <img src="assets/hero-cosmetic.png" class="w-full h-full object-cover group-hover:scale-110 transition-transform">
+                                                    </div>
+                                                </div>
+                                                <div class="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-3 rtl:space-x-reverse">
+                                                    <button class="w-full py-2.5 bg-primary text-white text-[10px] font-black rounded-xl btn-cta">APPROVE ALL</button>
+                                                    <button class="w-full py-2.5 bg-white dark:bg-dark-soft text-slate-900 dark:text-white text-[10px] font-black rounded-xl border border-slate-200 dark:border-white/10 hover:bg-slate-100 transition-all uppercase">REJECT / COMMENT</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <span class="text-[9px] font-black text-primary uppercase tracking-widest">CURRENT</span>
+                                    </div>
+                                </div>
+
+                                <!-- Step 4: PENDING -->
+                                <div class="relative pl-10 lg:pl-12 rtl:pl-0 rtl:pr-10 lg:rtl:pr-12 opacity-40">
+                                    <div class="absolute left-0 rtl:left-auto rtl:right-0 top-0 w-6 h-6 bg-slate-200 dark:bg-white/10 rounded-full border-4 border-white dark:border-dark-soft"></div>
+                                    <h4 class="font-black text-base lg:text-lg text-slate-400">Print-Ready File Handover</h4>
+                                    <p class="text-sm text-slate-400 mt-1 italic">Expected: June 01, 2026</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Production File Tracker -->
+                        <div id="files" class="bg-white dark:bg-dark-soft p-6 lg:p-10 rounded-3xl lg:rounded-[3rem] shadow-sm border border-slate-100 dark:border-white/5">
+                            <div class="flex items-center justify-between mb-10">
+                                <h3 class="text-xl lg:text-2xl font-black">Production Files</h3>
+                                <button class="text-xs font-black text-primary uppercase tracking-widest hover:underline">Download All Assets</button>
+                            </div>
+                            <div class="grid md:grid-cols-2 gap-4">
+                                <div class="p-6 bg-slate-50 dark:bg-dark rounded-3xl border border-slate-100 dark:border-white/5 flex items-center justify-between group hover:border-primary transition-all">
+                                    <div class="flex items-center space-x-4">
+                                        <div class="w-12 h-12 bg-primary/10 text-primary rounded-2xl flex items-center justify-center font-black">AI</div>
+                                        <div>
+                                            <p class="text-sm font-black">Coffee_Bag_Dieline.ai</p>
+                                            <p class="text-[10px] text-slate-400 font-bold">STRUCTURAL • 12.4 MB</p>
+                                        </div>
+                                    </div>
+                                    <button class="p-2 text-slate-300 group-hover:text-primary transition-colors"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12" /></svg></button>
+                                </div>
+                                <div class="p-6 bg-slate-50 dark:bg-dark rounded-3xl border border-slate-100 dark:border-white/5 flex items-center justify-between group hover:border-primary transition-all">
+                                    <div class="flex items-center space-x-4">
+                                        <div class="w-12 h-12 bg-secondary/10 text-secondary rounded-2xl flex items-center justify-center font-black">PDF</div>
+                                        <div>
+                                            <p class="text-sm font-black">Technical_Specs_V2.pdf</p>
+                                            <p class="text-[10px] text-slate-400 font-bold">SPEC • 2.1 MB</p>
+                                        </div>
+                                    </div>
+                                    <button class="p-2 text-slate-300 group-hover:text-primary transition-colors"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12" /></svg></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Column: Specs & Vendors -->
+                    <div class="space-y-10">
+                        
+                        <!-- Upload Section -->
+                        <div id="specifications" class="bg-dark dark:bg-dark-soft p-10 rounded-[3rem] text-white shadow-2xl shadow-slate-900/40 relative overflow-hidden group">
+                            <div class="absolute inset-0 bg-primary opacity-0 group-hover:opacity-5 transition-opacity"></div>
+                            <h3 class="text-xl font-black mb-2">Upload Product Specs</h3>
+                            <p class="text-xs text-slate-400 mb-8 leading-relaxed">Submit your net weight, barcodes, and ingredient lists for layout integration.</p>
+                            
+                            <div class="border-2 border-dashed border-white/10 rounded-[2rem] p-10 text-center hover:border-primary transition-all cursor-pointer bg-white/5 rtl:text-center">
+                                <svg class="w-12 h-12 text-slate-600 mx-auto mb-4 rtl:mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" /></svg>
+                                <p class="text-sm font-black">Drop CSV or XLSX</p>
+                                <p class="text-[9px] uppercase tracking-widest text-slate-500 mt-2 font-black">or click to browse</p>
+                            </div>
+                            
+                            <button class="w-full mt-6 py-4 bg-white/10 border border-white/10 text-white text-xs font-black rounded-2xl hover:bg-white/20 transition-all uppercase tracking-widest">View Specs Library</button>
+                            
+                            <div class="mt-8 pt-8 border-t border-white/10">
+                                <p class="text-[10px] font-black text-slate-500 uppercase tracking-widest mb-4">Recent Uploads</p>
+                                <div class="space-y-3">
+                                    <div class="flex justify-between items-center text-[11px]">
+                                        <span class="text-slate-300">Nutritional_Info_V1.xlsx</span>
+                                        <span class="text-green-500">Verified</span>
+                                    </div>
+                                    <div class="flex justify-between items-center text-[11px]">
+                                        <span class="text-slate-300">Barcode_Master_List.csv</span>
+                                        <span class="text-primary italic">In Review</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Vendor Management -->
+                        <div id="vendors" class="bg-white dark:bg-dark-soft p-10 rounded-[3rem] shadow-sm border border-slate-100 dark:border-white/5">
+                            <div class="flex items-center justify-between mb-8">
+                                <h3 class="text-xl font-black rtl:text-right">Vendor Specs</h3>
+                                <button class="w-8 h-8 bg-slate-100 dark:bg-dark rounded-full flex items-center justify-center text-slate-400 hover:text-primary transition-all">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" /></svg>
+                                </button>
+                            </div>
+                            
+                            <div class="space-y-6">
+                                <div class="flex items-center justify-between p-5 bg-slate-50 dark:bg-dark rounded-[2rem] border border-transparent hover:border-primary transition-all rtl:flex-row-reverse">
+                                    <div class="flex items-center space-x-4 rtl:space-x-reverse">
+                                        <div class="w-12 h-12 bg-white dark:bg-dark-soft rounded-full flex items-center justify-center font-black text-sm shadow-sm">ES</div>
+                                        <div>
+                                            <p class="text-sm font-black">EcoPrint Sol.</p>
+                                            <p class="text-[9px] text-slate-400 font-black uppercase tracking-widest">Main Printer</p>
+                                        </div>
+                                    </div>
+                                    <span class="w-2.5 h-2.5 bg-green-500 rounded-full shadow-lg shadow-green-500/40"></span>
+                                </div>
+                                <div class="flex items-center justify-between p-5 bg-slate-50 dark:bg-dark rounded-[2rem] border border-transparent hover:border-primary transition-all rtl:flex-row-reverse">
+                                    <div class="flex items-center space-x-4 rtl:space-x-reverse">
+                                        <div class="w-12 h-12 bg-white dark:bg-dark-soft rounded-full flex items-center justify-center font-black text-sm shadow-sm">FL</div>
+                                        <div>
+                                            <p class="text-sm font-black">FlexoLine Co.</p>
+                                            <p class="text-[9px] text-slate-400 font-black uppercase tracking-widest">Label Vendor</p>
+                                        </div>
+                                    </div>
+                                    <span class="text-[9px] font-black text-slate-400 uppercase tracking-widest">Mailing...</span>
+                                </div>
+                            </div>
+                            
+                            <div class="mt-8 p-6 bg-primary/5 rounded-[2rem] border border-primary/10">
+                                <div class="flex justify-between items-center mb-2">
+                                    <p class="text-[10px] font-black text-primary uppercase tracking-[0.2em]">Latest Update</p>
+                                    <span class="text-[9px] text-slate-400 font-bold">2h ago</span>
+                                </div>
+                                <p class="text-xs text-slate-500 leading-relaxed font-medium">"Structural tests for the 500g pouch have been confirmed by EcoPrint. Material sync completed."</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        function toggleTheme() {
+            document.documentElement.classList.toggle('dark');
+            localStorage.theme = document.documentElement.classList.contains('dark') ? 'dark' : 'light';
+        }
+        function toggleRTL() {
+            const html = document.documentElement;
+            if (html.dir === 'rtl') {
+                html.dir = 'ltr';
+                localStorage.rtl = 'false';
+            } else {
+                html.dir = 'rtl';
+                localStorage.rtl = 'true';
+            }
+        }
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        }
+        if (localStorage.rtl === 'true') {
+            document.documentElement.dir = 'rtl';
+        }
+        const toggleDashboardMenu = () => {
+            const sidebar = document.getElementById('mobile-sidebar');
+            const aside = sidebar.querySelector('aside');
+            const isRTL = document.documentElement.dir === 'rtl';
+            
+            if (sidebar.classList.contains('hidden')) {
+                sidebar.classList.remove('hidden');
+                setTimeout(() => {
+                    aside.classList.remove('-translate-x-full');
+                    aside.classList.remove('translate-x-full');
+                }, 10);
+            } else {
+                aside.classList.add(isRTL ? 'translate-x-full' : '-translate-x-full');
+                setTimeout(() => {
+                    sidebar.classList.add('hidden');
+                }, 300);
+            }
+        }
+    </script>
+</body>
+</html>

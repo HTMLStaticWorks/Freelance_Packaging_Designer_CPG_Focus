@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Wrapt Packaging Studio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#FF4D00',
+                        dark: '#121212',
+                        'dark-soft': '#1E1E1E'
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        display: ['Outfit', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .auth-card {
+            max-width: 500px;
+            width: 100%;
+            background: #fff;
+            padding: 60px 40px;
+            border: 1px solid #f0f0f0;
+        }
+        .dark .auth-card {
+            background: #1e1e1e;
+            border-color: #333;
+        }
+        .input-label {
+            font-size: 10px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: #94a3b8;
+            margin-bottom: 8px;
+            display: block;
+        }
+        .auth-input {
+            width: 100%;
+            padding: 14px 16px;
+            border: 1px solid #e2e8f0;
+            border-radius: 2px;
+            font-size: 14px;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+        .dark .auth-input {
+            background: transparent;
+            border-color: #444;
+            color: #fff;
+        }
+        .auth-input:focus {
+            border-color: #FF4D00;
+        }
+    </style>
+</head>
+<body class="bg-[#fafafa] dark:bg-dark min-h-screen flex items-center justify-center p-6 transition-colors duration-300">
+    
+    <!-- Top Right Toggles -->
+    <div class="fixed top-8 right-8 flex items-center space-x-4">
+        <button onclick="toggleTheme()" class="p-2 border border-slate-200 dark:border-white/10 rounded hover:bg-white dark:hover:bg-white/5 transition-all shadow-sm">
+             <svg class="w-4 h-4 dark:hidden" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+             <svg class="w-4 h-4 hidden dark:block text-white" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" /></svg>
+        </button>
+        <button onclick="toggleRTL()" class="px-3 py-2 border border-slate-200 dark:border-white/10 rounded hover:bg-white dark:hover:bg-white/5 transition-all text-[10px] font-black shadow-sm dark:text-white uppercase tracking-widest">RTL</button>
+    </div>
+
+    <div class="auth-card shadow-2xl shadow-slate-200/50 dark:shadow-none">
+        <!-- Logo -->
+        <div class="flex flex-col items-center mb-10">
+            <a href="index.html" class="flex items-center space-x-3 group">
+                <div class="w-10 h-10 bg-primary rounded flex items-center justify-center transform group-hover:rotate-12 transition-transform duration-300">
+                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" /></svg>
+                </div>
+                <span class="text-2xl font-display font-bold tracking-tight dark:text-white">WRAPT</span>
+            </a>
+        </div>
+
+        <div class="text-center mb-12">
+            <h1 class="text-4xl font-display font-light text-slate-800 dark:text-white mb-3">Welcome Back</h1>
+            <p class="text-[10px] font-black uppercase tracking-[0.2em] text-slate-400">Enter your credentials to access the studio</p>
+        </div>
+
+        <form action="dashboard.html" class="space-y-8">
+            <div>
+                <label class="input-label">Email Address</label>
+                <input type="email" placeholder="email@example.com" class="auth-input">
+            </div>
+            
+            <div class="relative">
+                <div class="flex justify-between items-center mb-2">
+                    <label class="input-label mb-0">Password</label>
+                </div>
+                <div class="relative">
+                    <input type="password" id="password" placeholder="••••••••" class="auth-input">
+                    <button type="button" onclick="togglePass()" class="absolute right-4 top-1/2 -translate-y-1/2 text-slate-300 hover:text-primary transition-colors">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" /></svg>
+                    </button>
+                </div>
+                <div class="text-right mt-3">
+                    <a href="#" class="text-[9px] font-black text-slate-400 hover:text-primary uppercase tracking-widest transition-colors">Forgot?</a>
+                </div>
+            </div>
+
+            <div class="flex items-center space-x-2 py-2">
+                <input type="checkbox" id="remember" class="w-4 h-4 border-slate-300 rounded text-primary focus:ring-primary">
+                <label for="remember" class="text-xs text-slate-500 font-medium cursor-pointer">Keep me logged in</label>
+            </div>
+
+            <button class="w-full py-5 bg-primary text-white font-black text-sm uppercase tracking-[0.2em] btn-cta">
+                Login to Studio
+            </button>
+        </form>
+
+        <div class="mt-12 text-center">
+            <p class="text-xs text-slate-400 font-medium">
+                Don't have an account? 
+                <a href="signup.html" class="text-primary font-bold hover:underline ml-1">Register Now</a>
+            </p>
+        </div>
+    </div>
+
+    <script>
+        const togglePass = () => {
+            const p = document.getElementById('password');
+            p.type = p.type === 'password' ? 'text' : 'password';
+        }
+        
+        function toggleTheme() {
+            document.documentElement.classList.toggle('dark');
+            localStorage.theme = document.documentElement.classList.contains('dark') ? 'dark' : 'light';
+        }
+
+        function toggleRTL() {
+            const isRTL = document.documentElement.dir === 'rtl';
+            document.documentElement.dir = isRTL ? 'ltr' : 'rtl';
+        }
+
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+    </script>
+</body>
+</html>
