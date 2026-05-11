@@ -65,7 +65,17 @@
                         <span>Vendor Portal</span>
                     </a>
                 </nav>
-                <div class="p-6 mt-auto">
+                <div class="p-6 mt-auto space-y-4">
+                    <!-- Mobile Utilities Row -->
+                    <div class="flex items-center justify-center pt-4 border-t border-slate-100 dark:border-white/5">
+                        <div class="flex items-center space-x-3">
+                            <button onclick="toggleTheme()" class="w-12 h-12 flex items-center justify-center rounded-xl bg-slate-100 dark:bg-white/5 text-slate-600 dark:text-slate-400" title="Toggle Theme">
+                                <svg class="w-6 h-6 dark:hidden" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+                                <svg class="w-6 h-6 hidden dark:block text-primary" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+                            </button>
+                            <button onclick="toggleRTL()" class="w-12 h-12 flex items-center justify-center rounded-xl bg-slate-100 dark:bg-white/5 text-xs font-black uppercase" title="Toggle RTL">RTL</button>
+                        </div>
+                    </div>
                     <a href="index.html" class="flex items-center justify-center space-x-3 rtl:space-x-reverse w-full py-4 bg-red-50 dark:bg-red-500/10 text-red-500 rounded-2xl text-sm font-black transition-all">
                         <svg class="w-5 h-5 rtl:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" /></svg>
                         <span>Logout</span>
@@ -122,7 +132,7 @@
             <header class="sticky top-0 z-40 bg-white/80 dark:bg-dark/80 backdrop-blur-md px-4 lg:px-10 h-28 lg:h-36 flex items-center justify-between border-b border-slate-200 dark:border-white/5">
                 <div class="flex items-center space-x-4 lg:space-x-0 rtl:space-x-reverse">
                     <button onclick="toggleDashboardMenu()" class="lg:hidden p-2 text-slate-600 dark:text-white bg-slate-100 dark:bg-white/5 rounded-xl">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" /></svg>
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" /></svg>
                     </button>
                     <div class="max-w-[150px] sm:max-w-[250px] lg:max-w-none lg:py-4">
                         <h2 class="text-lg sm:text-xl lg:text-3xl font-black truncate">Project: <span class="text-primary lg:underline lg:decoration-4 lg:underline-offset-8">Artisanal Coffee</span></h2>
@@ -138,14 +148,6 @@
                         </button>
                         <button onclick="toggleRTL()" class="hidden lg:block p-1.5 lg:p-2 text-slate-400 hover:text-primary transition-all text-[8px] lg:text-[10px] font-black uppercase tracking-widest rounded-full hover:bg-slate-100 dark:hover:bg-white/5" title="Toggle RTL">RTL</button>
 
-                        <!-- Fixed Mobile Utilities -->
-                        <div class="lg:hidden fixed top-4 right-20 z-[60] flex items-center space-x-2 rtl:space-x-reverse">
-                            <button onclick="toggleTheme()" class="w-10 h-10 flex items-center justify-center rounded-xl bg-white/80 dark:bg-dark/80 backdrop-blur-md border border-slate-200 dark:border-white/10 shadow-lg transition-all active:scale-95" title="Toggle Theme">
-                                <svg class="w-5 h-5 dark:hidden" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
-                                <svg class="w-5 h-5 hidden dark:block text-primary" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
-                            </button>
-                            <button onclick="toggleRTL()" class="w-10 h-10 flex items-center justify-center rounded-xl bg-white/80 dark:bg-dark/80 backdrop-blur-md border border-slate-200 dark:border-white/10 shadow-lg text-[10px] font-black uppercase transition-all active:scale-95" title="Toggle RTL">RTL</button>
-                        </div>
                         <button class="relative p-2 text-slate-400 hover:text-primary transition-all">
                             <svg class="w-5 h-5 lg:w-6 lg:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" /></svg>
                             <span class="absolute top-1.5 right-1.5 lg:top-1 lg:right-1 w-2 h-2 lg:w-2.5 lg:h-2.5 bg-primary border-2 border-white dark:border-dark rounded-full"></span>
@@ -161,7 +163,7 @@
                 </div>
             </header>
 
-            <div class="p-4 lg:p-10 space-y-6 lg:space-y-10">
+            <div id="overview" class="p-4 lg:p-10 space-y-6 lg:space-y-10">
                 <!-- Overview Stats -->
                 <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6">
                     <div class="bg-white dark:bg-dark-soft p-6 rounded-3xl border border-slate-100 dark:border-white/5 shadow-sm">
@@ -189,10 +191,10 @@
                 </div>
 
                 <!-- Dashboard Grid -->
-                <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-10">
+                <div class="grid grid-cols-1 xl:grid-cols-3 gap-6 lg:gap-10">
                     
                     <!-- Progress & Approvals -->
-                    <div class="lg:col-span-2 space-y-10">
+                    <div class="xl:col-span-2 space-y-10">
                         
                         <!-- Timeline Section -->
                         <div id="approvals" class="bg-white dark:bg-dark-soft p-6 lg:p-10 rounded-3xl lg:rounded-[3rem] shadow-sm border border-slate-100 dark:border-white/5 relative overflow-hidden">
@@ -255,7 +257,7 @@
                                                         <img src="assets/hero-coffee.png" class="w-full h-full object-cover group-hover:scale-110 transition-transform">
                                                     </div>
                                                     <div class="aspect-square bg-slate-100 dark:bg-dark rounded-xl overflow-hidden border border-slate-200 dark:border-white/10 group cursor-zoom-in">
-                                                        <img src="assets/packaging-grid.png" class="w-full h-full object-cover group-hover:scale-110 transition-transform">
+                                                        <img src="assets/portfolio-snack.png" class="w-full h-full object-cover group-hover:scale-110 transition-transform">
                                                     </div>
                                                     <div class="aspect-square bg-slate-100 dark:bg-dark rounded-xl overflow-hidden border border-slate-200 dark:border-white/10 group cursor-zoom-in">
                                                         <img src="assets/hero-cosmetic.png" class="w-full h-full object-cover group-hover:scale-110 transition-transform">
@@ -281,7 +283,7 @@
                         </div>
 
                         <!-- Production File Tracker -->
-                        <div id="files" class="bg-white dark:bg-dark-soft p-5 lg:p-10 rounded-3xl lg:rounded-[3rem] shadow-sm border border-slate-100 dark:border-white/5">
+                        <div id="files" class="bg-white dark:bg-dark-soft p-6 lg:p-10 rounded-3xl lg:rounded-[3rem] shadow-sm border border-slate-100 dark:border-white/5">
                             <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-8 space-y-4 sm:space-y-0">
                                 <h3 class="text-xl lg:text-2xl font-black">Production Files</h3>
                                 <button class="text-[10px] sm:text-xs font-black text-primary uppercase tracking-widest hover:underline text-left sm:text-right">Download All Assets</button>
@@ -319,7 +321,7 @@
                     <div class="space-y-10">
                         
                         <!-- Upload Section -->
-                        <div id="specifications" class="bg-dark dark:bg-dark-soft p-10 rounded-[3rem] text-white shadow-2xl shadow-slate-900/40 relative overflow-hidden group">
+                        <div id="specifications" class="bg-dark dark:bg-dark-soft p-6 lg:p-10 rounded-3xl lg:rounded-[3rem] text-white shadow-2xl shadow-slate-900/40 relative overflow-hidden group">
                             <div class="absolute inset-0 bg-primary opacity-0 group-hover:opacity-5 transition-opacity"></div>
                             <h3 class="text-xl font-black mb-2">Upload Product Specs</h3>
                             <p class="text-xs text-slate-400 mb-8 leading-relaxed">Submit your net weight, barcodes, and ingredient lists for layout integration.</p>
@@ -348,9 +350,9 @@
                         </div>
 
                         <!-- Vendor Management -->
-                        <div id="vendors" class="bg-white dark:bg-dark-soft p-10 rounded-[3rem] shadow-sm border border-slate-100 dark:border-white/5">
+                        <div id="vendors" class="bg-white dark:bg-dark-soft p-6 lg:p-10 rounded-3xl lg:rounded-[3rem] shadow-sm border border-slate-100 dark:border-white/5">
                             <div class="flex items-center justify-between mb-8">
-                                <h3 class="text-xl font-black rtl:text-right">Vendor Specs</h3>
+                                <h3 class="text-xl font-black rtl:text-right whitespace-nowrap">Vendor Specs</h3>
                                 <button class="w-8 h-8 bg-slate-100 dark:bg-dark rounded-full flex items-center justify-center text-slate-400 hover:text-primary transition-all">
                                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" /></svg>
                                 </button>
@@ -425,6 +427,7 @@
                 setTimeout(() => {
                     aside.classList.remove('-translate-x-full');
                     aside.classList.remove('translate-x-full');
+                    aside.classList.add(isRTL ? 'translate-x-0' : 'translate-x-0');
                 }, 10);
             } else {
                 aside.classList.add(isRTL ? 'translate-x-full' : '-translate-x-full');
@@ -433,6 +436,26 @@
                 }, 300);
             }
         }
+
+        // Active State Highlighting for Dashboard
+        const updateActiveNavLink = () => {
+            const hash = window.location.hash || '#overview';
+            const navLinks = document.querySelectorAll('aside nav a');
+            
+            navLinks.forEach(link => {
+                const isMatching = link.getAttribute('href') === hash;
+                if (isMatching) {
+                    link.classList.remove('text-slate-400', 'hover:bg-slate-100', 'dark:hover:bg-white/5', 'font-bold');
+                    link.classList.add('bg-primary/10', 'text-primary', 'font-black');
+                } else {
+                    link.classList.add('text-slate-400', 'hover:bg-slate-100', 'dark:hover:bg-white/5', 'font-bold');
+                    link.classList.remove('bg-primary/10', 'text-primary', 'font-black');
+                }
+            });
+        };
+
+        window.addEventListener('hashchange', updateActiveNavLink);
+        window.addEventListener('DOMContentLoaded', updateActiveNavLink);
     </script>
 </body>
 </html>

@@ -96,7 +96,7 @@
                         <button onclick="toggleMobileMenu()" class="text-slate-900 dark:text-white p-2">
                             <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M4 6h16M4 12h16m-7 6h7" />
+                                    d="M4 6h16M4 12h16M4 18h16" />
                             </svg>
                         </button>
                     </div>
@@ -104,16 +104,7 @@
             </div>
         </div>
 
-        <!-- Fixed Mobile Utilities -->
-        <div class="lg:hidden fixed top-4 right-20 z-[60] flex items-center space-x-2 rtl:space-x-reverse">
-            <button onclick="toggleTheme()" class="w-10 h-10 flex items-center justify-center rounded-xl bg-white/80 dark:bg-dark/80 backdrop-blur-md border border-slate-200 dark:border-white/10 shadow-lg transition-all active:scale-95" title="Toggle Theme">
-                <svg class="w-5 h-5 dark:hidden" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
-                <svg class="w-5 h-5 hidden dark:block text-primary" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
-            </button>
-            <button onclick="toggleRTL()" class="w-10 h-10 flex items-center justify-center rounded-xl bg-white/80 dark:bg-dark/80 backdrop-blur-md border border-slate-200 dark:border-white/10 shadow-lg text-[10px] font-black uppercase transition-all active:scale-95" title="Toggle RTL">RTL</button>
-        </div>
 
-        <!-- Mobile Menu Panel -->
         <div id="mobile-menu"
             class="hidden lg:hidden bg-white dark:bg-dark-soft border-b border-slate-200 dark:border-white/10 animate-fade-in-down">
             <div class="px-4 pt-2 pb-6 space-y-1">
@@ -130,66 +121,60 @@
                     class="block px-3 py-4 text-base font-medium hover:text-primary transition-colors">Contact</a>
                 <a href="dashboard.html"
                     class="block px-3 py-4 text-base font-medium hover:text-primary transition-colors">Dashboard</a>
-                <div class="pt-4 flex flex-col space-y-3">
-
-                    <a href="signup.html" class="text-center py-3 bg-primary text-white rounded-xl font-bold">Sign
-                        Up</a>
+                
+                <div class="pt-6 flex flex-col space-y-4">
+                    <a href="signup.html" class="text-center py-4 bg-primary text-white rounded-xl font-bold text-base">Sign Up</a>
                     
+                    <!-- Mobile Utilities Row -->
+                    <div class="flex items-center justify-between pt-4 border-t border-slate-100 dark:border-white/5">
+                        <span class="text-sm font-bold text-slate-500 uppercase tracking-widest">Settings</span>
+                        <div class="flex items-center space-x-3">
+                            <button onclick="toggleTheme()" class="w-12 h-12 flex items-center justify-center rounded-xl bg-slate-100 dark:bg-white/5 text-slate-600 dark:text-slate-400" title="Toggle Theme">
+                                <svg class="w-6 h-6 dark:hidden" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+                                <svg class="w-6 h-6 hidden dark:block text-primary" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+                            </button>
+                            <button onclick="toggleRTL()" class="w-12 h-12 flex items-center justify-center rounded-xl bg-slate-100 dark:bg-white/5 text-xs font-black uppercase" title="Toggle RTL">RTL</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
-        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full -z-10 overflow-hidden">
-            <div class="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-primary/10 rounded-full blur-[120px]"></div>
-            <div class="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-secondary/10 rounded-full blur-[120px]">
-            </div>
+    <section class="hero-full-bleed pt-32 pb-20 lg:pt-48 lg:pb-32">
+        <div class="hero-bg-container">
+            <img src="assets/hero-coffee.png" alt="Packaging Design Background">
+            <div class="hero-overlay"></div>
         </div>
 
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
-                <div class="reveal">
-                    <span
-                        class="inline-block py-1 px-4 rounded-full bg-primary/10 text-primary text-sm font-bold tracking-wider uppercase mb-6">
-                        CPG Packaging Specialist
-                    </span>
-                    <h1 class="text-5xl lg:text-8xl font-display font-extrabold leading-[1.1] mb-8">
-                        Design that <span class="text-primary">Stops the Scroll.</span>
-                    </h1>
-                    <p class="text-lg lg:text-xl text-slate-600 dark:text-slate-400 mb-10 leading-relaxed">
-                        We create high-impact packaging solutions for modern brands. From structural innovation to
-                        shelf-ready graphics, we wrap your vision in excellence.
-                    </p>
-                    <div class="flex flex-col sm:flex-row gap-4">
-                        <a href="portfolio.html"
-                            class="px-8 py-4 bg-primary text-white rounded-full text-lg font-bold flex items-center justify-center btn-cta">
-                            View Portfolio
-                            <svg class="w-5 h-5 ml-2 rtl:mr-2 rtl:ml-0" fill="none" stroke="currentColor"
-                                viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                            </svg>
-                        </a>
-                        <a href="contact.html"
-                            class="px-8 py-4 bg-white dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-full text-lg font-bold text-center btn-cta-secondary">
-                            Start a Project
-                        </a>
-                    </div>
-                </div>
-                <div class="relative reveal delay-200 lg:mt-0 mt-16">
-                    <div class="relative z-10 animate-float">
-                        <img src="assets/hero-coffee.png" alt="Coffee Packaging Mockup"
-                            class="w-full h-auto rounded-[3rem] shadow-2xl">
-                    </div>
-                    <!-- Decorative Elements -->
-                    <div
-                        class="absolute -top-10 -right-10 w-48 h-48 bg-primary/20 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-pulse">
-                    </div>
-                    <div
-                        class="absolute -bottom-10 -left-10 w-64 h-64 bg-secondary/20 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-pulse delay-700">
-                    </div>
+        <div class="hero-content-centered">
+            <div class="reveal">
+                <span
+                    class="inline-block py-1 px-4 rounded-full bg-primary/20 text-primary text-sm font-bold tracking-wider uppercase mb-6 backdrop-blur-md border border-primary/20">
+                    CPG Packaging Specialist
+                </span>
+                <h1 class="text-5xl lg:text-8xl font-display font-extrabold leading-[1.1] mb-8 text-white">
+                    Design that <span class="text-primary">Stops the Scroll.</span>
+                </h1>
+                <p class="text-lg lg:text-xl text-slate-200 mb-10 leading-relaxed max-w-3xl mx-auto">
+                    We create high-impact packaging solutions for modern brands. From structural innovation to
+                    shelf-ready graphics, we wrap your vision in excellence.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="portfolio.html"
+                        class="px-8 py-4 bg-primary text-white rounded-full text-lg font-bold flex items-center justify-center btn-cta">
+                        View Portfolio
+                        <svg class="w-5 h-5 ml-2 rtl:mr-2 rtl:ml-0" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                        </svg>
+                    </a>
+                    <a href="contact.html"
+                        class="px-8 py-4 bg-white/10 backdrop-blur-md border border-white/20 rounded-full text-lg font-bold text-center text-white btn-cta-secondary hover:bg-white/20 transition-all">
+                        Start a Project
+                    </a>
                 </div>
             </div>
         </div>
@@ -599,7 +584,7 @@
                             class="w-10 h-10 bg-white/5 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
                             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                                 <path
-                                    d="M22,7H15V5h7V7z M12.44,14.5c0.06,1.41,1.25,2.52,2.72,2.52c1.24,0,2.11-0.6,2.48-1.58h2.32c-0.52,2.26-2.53,3.56-4.8,3.56c-3.1,0-5.16-2.1-5.16-5.5s2.06-5.5,5.16-5.5c2.31,0,4.25,1.26,4.79,3.52h-2.31c-0.38-0.99-1.25-1.54-2.48-1.54c-1.47,0-2.66,1.11-2.72,2.52h5.02v0.48h-5.02V14.5z M12.5,13.5h4.9c-0.11-1.18-1.05-2.02-2.45-2.02C13.55,11.48,12.61,12.32,12.5,13.5z M2.5,11h3c1.5,0,2.5-0.5,2.5-2s-1-2-2.5-2h-3V11z M2.5,13v4h3.5c1.5,0,2.5-0.5,2.5-2s-1-2-2.5-2H2.5z M0,5h6c2.5,0,4.5,1.5,4.5,3.5c0,1.2-0.5,2.1-1.4,2.8c0.9,0.7,1.4,1.6,1.4,2.8c0,2-2,3.5-4.5,3.5H0V5z" />
+                                    d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
                             </svg>
                         </a>
                         <a href="#"
