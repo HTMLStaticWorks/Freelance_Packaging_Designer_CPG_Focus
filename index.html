@@ -121,19 +121,31 @@
                     class="block px-3 py-4 text-base font-medium hover:text-primary transition-colors">Contact</a>
                 <a href="dashboard.html"
                     class="block px-3 py-4 text-base font-medium hover:text-primary transition-colors">Dashboard</a>
-                
+
                 <div class="pt-6 flex flex-col space-y-4">
-                    <a href="signup.html" class="text-center py-4 bg-primary text-white rounded-xl font-bold text-base">Sign Up</a>
-                    
+                    <a href="signup.html"
+                        class="text-center py-4 bg-primary text-white rounded-xl font-bold text-base">Sign Up</a>
+
                     <!-- Mobile Utilities Row -->
                     <div class="flex items-center justify-between pt-4 border-t border-slate-100 dark:border-white/5">
                         <span class="text-sm font-bold text-slate-500 uppercase tracking-widest">Settings</span>
                         <div class="flex items-center space-x-3">
-                            <button onclick="toggleTheme()" class="w-12 h-12 flex items-center justify-center rounded-xl bg-slate-100 dark:bg-white/5 text-slate-600 dark:text-slate-400" title="Toggle Theme">
-                                <svg class="w-6 h-6 dark:hidden" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
-                                <svg class="w-6 h-6 hidden dark:block text-primary" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+                            <button onclick="toggleTheme()"
+                                class="w-12 h-12 flex items-center justify-center rounded-xl bg-slate-100 dark:bg-white/5 text-slate-600 dark:text-slate-400"
+                                title="Toggle Theme">
+                                <svg class="w-6 h-6 dark:hidden" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                                </svg>
+                                <svg class="w-6 h-6 hidden dark:block text-primary" fill="currentColor"
+                                    viewBox="0 0 20 20">
+                                    <path
+                                        d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+                                        fill-rule="evenodd" clip-rule="evenodd"></path>
+                                </svg>
                             </button>
-                            <button onclick="toggleRTL()" class="w-12 h-12 flex items-center justify-center rounded-xl bg-slate-100 dark:bg-white/5 text-xs font-black uppercase" title="Toggle RTL">RTL</button>
+                            <button onclick="toggleRTL()"
+                                class="w-12 h-12 flex items-center justify-center rounded-xl bg-slate-100 dark:bg-white/5 text-xs font-black uppercase"
+                                title="Toggle RTL">RTL</button>
                         </div>
                     </div>
                 </div>
@@ -144,7 +156,8 @@
     <!-- Hero Section -->
     <section class="hero-full-bleed pt-32 pb-20 lg:pt-48 lg:pb-32">
         <div class="hero-bg-container">
-            <img src="packaging_showcase_hero_1778308620125.png" alt="Packaging Mockup Showcase Background">
+            <img src="https://images.pexels.com/photos/6958425/pexels-photo-6958425.jpeg"
+                alt="Packaging Mockup Showcase Background">
             <div class="hero-overlay"></div>
         </div>
 
@@ -224,16 +237,24 @@
 
             <!-- Homepage Showcase Filters -->
             <div class="flex flex-wrap gap-3 mb-10 reveal" id="showcase-filters">
-                <button data-filter="all" class="px-5 py-2 rounded-full bg-primary text-white font-bold transition-all text-xs">All Showcase</button>
-                <button data-filter="food" class="px-5 py-2 rounded-full bg-slate-100 dark:bg-white/5 text-slate-600 dark:text-slate-300 hover:bg-primary hover:text-white transition-all font-bold text-xs">Food & Snacks</button>
-                <button data-filter="beverage" class="px-5 py-2 rounded-full bg-slate-100 dark:bg-white/5 text-slate-600 dark:text-slate-300 hover:bg-primary hover:text-white transition-all font-bold text-xs">Beverages & Bottles</button>
-                <button data-filter="beauty" class="px-5 py-2 rounded-full bg-slate-100 dark:bg-white/5 text-slate-600 dark:text-slate-300 hover:bg-primary hover:text-white transition-all font-bold text-xs">Beauty & Cosmetics</button>
+                <button data-filter="all"
+                    class="px-5 py-2 rounded-full bg-primary text-white font-bold transition-all text-xs">All
+                    Showcase</button>
+                <button data-filter="food"
+                    class="px-5 py-2 rounded-full bg-slate-100 dark:bg-white/5 text-slate-600 dark:text-slate-300 hover:bg-primary hover:text-white transition-all font-bold text-xs">Food
+                    & Snacks</button>
+                <button data-filter="beverage"
+                    class="px-5 py-2 rounded-full bg-slate-100 dark:bg-white/5 text-slate-600 dark:text-slate-300 hover:bg-primary hover:text-white transition-all font-bold text-xs">Beverages
+                    & Bottles</button>
+                <button data-filter="beauty"
+                    class="px-5 py-2 rounded-full bg-slate-100 dark:bg-white/5 text-slate-600 dark:text-slate-300 hover:bg-primary hover:text-white transition-all font-bold text-xs">Beauty
+                    & Cosmetics</button>
             </div>
 
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Project 1 -->
-                <div
-                    class="shelf-impact-card portfolio-item bg-white dark:bg-dark rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl transition-all reveal flex flex-col" data-category="food">
+                <div class="shelf-impact-card portfolio-item bg-white dark:bg-dark rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl transition-all reveal flex flex-col"
+                    data-category="food">
                     <div class="h-80 overflow-hidden relative group">
                         <img src="https://images.pexels.com/photos/7262457/pexels-photo-7262457.jpeg"
                             alt="Snack Box Design"
@@ -246,7 +267,8 @@
                     <div class="p-8 flex flex-col flex-grow">
                         <span class="text-primary text-xs font-bold uppercase tracking-widest">Food & Beverage</span>
                         <h3 class="text-xl font-bold mt-2 mb-4">Zero-Waste Snack Pouches</h3>
-                        <p class="text-slate-500 text-sm leading-relaxed mb-6 flex-grow">Sustainable material integration with
+                        <p class="text-slate-500 text-sm leading-relaxed mb-6 flex-grow">Sustainable material
+                            integration with
                             bold, shelf-popping graphics for a millennial snack brand.</p>
                         <div class="flex space-x-2 rtl:space-x-reverse">
                             <span
@@ -258,8 +280,8 @@
                 </div>
 
                 <!-- Project 2 -->
-                <div
-                    class="shelf-impact-card portfolio-item bg-white dark:bg-dark rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl transition-all reveal delay-200 flex flex-col" data-category="beauty">
+                <div class="shelf-impact-card portfolio-item bg-white dark:bg-dark rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl transition-all reveal delay-200 flex flex-col"
+                    data-category="beauty">
                     <div class="h-80 overflow-hidden relative group">
                         <img src="https://images.pexels.com/photos/8102135/pexels-photo-8102135.jpeg"
                             alt="Cosmetic Packaging"
@@ -272,7 +294,8 @@
                     <div class="p-8 flex flex-col flex-grow">
                         <span class="text-primary text-xs font-bold uppercase tracking-widest">Beauty & Health</span>
                         <h3 class="text-xl font-bold mt-2 mb-4">Minimalist Skincare Range</h3>
-                        <p class="text-slate-500 text-sm leading-relaxed mb-6 flex-grow">Ultra-premium glass bottles with tactile
+                        <p class="text-slate-500 text-sm leading-relaxed mb-6 flex-grow">Ultra-premium glass bottles
+                            with tactile
                             label finishing for a luxury boutique skincare brand.</p>
                         <div class="flex space-x-2 rtl:space-x-reverse">
                             <span
@@ -284,8 +307,8 @@
                 </div>
 
                 <!-- Project 3 -->
-                <div
-                    class="shelf-impact-card portfolio-item bg-white dark:bg-dark rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl transition-all reveal delay-400 flex flex-col" data-category="beverage">
+                <div class="shelf-impact-card portfolio-item bg-white dark:bg-dark rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl transition-all reveal delay-400 flex flex-col"
+                    data-category="beverage">
                     <div class="h-80 overflow-hidden relative group">
                         <img src="https://images.pexels.com/photos/34536647/pexels-photo-34536647.jpeg"
                             alt="Coffee Packaging"
@@ -298,7 +321,8 @@
                     <div class="p-8 flex flex-col flex-grow">
                         <span class="text-primary text-xs font-bold uppercase tracking-widest">Beverage</span>
                         <h3 class="text-xl font-bold mt-2 mb-4">Artisanal Coffee Bags</h3>
-                        <p class="text-slate-500 text-sm leading-relaxed mb-6 flex-grow">Vibrant, color-coded bags designed to
+                        <p class="text-slate-500 text-sm leading-relaxed mb-6 flex-grow">Vibrant, color-coded bags
+                            designed to
                             differentiate origin while maintaining brand unity.</p>
                         <div class="flex space-x-2 rtl:space-x-reverse">
                             <span
@@ -379,7 +403,8 @@
                     <h2 class="text-4xl lg:text-5xl font-display font-bold mb-8 leading-tight">Beyond the Graphics.
                         <br><span class="text-secondary">Structural Innovation.</span>
                     </h2>
-                    <p class="text-slate-400 text-lg mb-8 max-w-2xl mx-auto">Good packaging is more than just a pretty label. We
+                    <p class="text-slate-400 text-lg mb-8 max-w-2xl mx-auto">Good packaging is more than just a pretty
+                        label. We
                         specialize in creating custom structures that improve user experience and reduce shipping costs.
                     </p>
                     <ul class="space-y-4 mb-10 text-left inline-block">

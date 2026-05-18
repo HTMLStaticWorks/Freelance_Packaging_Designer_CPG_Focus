@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -28,22 +29,27 @@
         }
     </script>
 </head>
+
 <body class="bg-white dark:bg-dark text-slate-900 dark:text-white transition-colors duration-300">
 
     <!-- Navbar (Same as index.html) -->
-    <nav class="fixed top-0 w-full z-50 bg-white/80 dark:bg-dark/80 backdrop-blur-lg border-b border-slate-200 dark:border-white/10">
+    <nav
+        class="fixed top-0 w-full z-50 bg-white/80 dark:bg-dark/80 backdrop-blur-lg border-b border-slate-200 dark:border-white/10">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
                 <!-- Logo -->
                 <div class="flex-shrink-0">
                     <a href="index.html" class="flex items-center space-x-2 rtl:space-x-reverse group w-fit">
-                        <div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center transform group-hover:rotate-12 transition-transform duration-300 relative overflow-hidden">
+                        <div
+                            class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center transform group-hover:rotate-12 transition-transform duration-300 relative overflow-hidden">
                             <div class="absolute -top-2 -right-2 w-6 h-6 bg-white/20 rotate-45"></div>
                             <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
                             </svg>
                         </div>
-                        <span class="text-2xl font-display font-bold tracking-tight text-slate-900 dark:text-white">WRAPT</span>
+                        <span
+                            class="text-2xl font-display font-bold tracking-tight text-slate-900 dark:text-white">WRAPT</span>
                     </a>
                 </div>
 
@@ -59,21 +65,34 @@
                         <a href="dashboard.html" class="hover:text-primary transition-colors">Dashboard</a>
                     </div>
                 </div>
-                
+
                 <!-- Right Side Buttons -->
                 <div class="flex items-center justify-end flex-shrink-0">
-                    <div class="hidden lg:flex items-center lg:space-x-3 xl:space-x-4 rtl:space-x-reverse border-l border-slate-200 dark:border-white/10 lg:pl-4 xl:pl-6 rtl:pl-0 rtl:pr-6">
-                        <button onclick="toggleTheme()" class="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-white/10 transition-colors">
-                            <svg class="w-5 h-5 dark:hidden" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
-                            <svg class="w-5 h-5 hidden dark:block" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+                    <div
+                        class="hidden lg:flex items-center lg:space-x-3 xl:space-x-4 rtl:space-x-reverse border-l border-slate-200 dark:border-white/10 lg:pl-4 xl:pl-6 rtl:pl-0 rtl:pr-6">
+                        <button onclick="toggleTheme()"
+                            class="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-white/10 transition-colors">
+                            <svg class="w-5 h-5 dark:hidden" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                            </svg>
+                            <svg class="w-5 h-5 hidden dark:block" fill="currentColor" viewBox="0 0 20 20">
+                                <path
+                                    d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+                                    fill-rule="evenodd" clip-rule="evenodd"></path>
+                            </svg>
                         </button>
-                        <button onclick="toggleRTL()" class="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-white/10 transition-colors text-xs font-bold">RTL</button>
-                        <a href="signup.html" class="px-5 py-2.5 bg-primary text-white rounded-full text-sm font-bold btn-cta">Sign up</a>
+                        <button onclick="toggleRTL()"
+                            class="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-white/10 transition-colors text-xs font-bold">RTL</button>
+                        <a href="signup.html"
+                            class="px-5 py-2.5 bg-primary text-white rounded-full text-sm font-bold btn-cta">Sign up</a>
                     </div>
 
                     <!-- Mobile Toggle & Utilities -->
                     <div class="lg:hidden flex items-center space-x-2 rtl:space-x-reverse">
-                        <button onclick="toggleMobileMenu()" class="p-2"><svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16" /></svg></button>
+                        <button onclick="toggleMobileMenu()" class="p-2"><svg class="w-8 h-8" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path d="M4 6h16M4 12h16M4 18h16" />
+                            </svg></button>
                     </div>
                 </div>
             </div>
@@ -82,7 +101,8 @@
         <div id="mobile-menu"
             class="hidden lg:hidden bg-white dark:bg-dark-soft border-b border-slate-200 dark:border-white/10 animate-fade-in-down">
             <div class="px-4 pt-2 pb-6 space-y-1">
-                <a href="index.html" class="block px-3 py-4 text-base font-medium hover:text-primary transition-colors">Home 1</a>
+                <a href="index.html"
+                    class="block px-3 py-4 text-base font-medium hover:text-primary transition-colors">Home 1</a>
                 <a href="home-2.html"
                     class="block px-3 py-4 text-base font-semibold text-primary transition-colors">Home 2</a>
                 <a href="about.html"
@@ -95,19 +115,31 @@
                     class="block px-3 py-4 text-base font-medium hover:text-primary transition-colors">Contact</a>
                 <a href="dashboard.html"
                     class="block px-3 py-4 text-base font-medium hover:text-primary transition-colors">Dashboard</a>
-                
+
                 <div class="pt-6 flex flex-col space-y-4">
-                    <a href="signup.html" class="text-center py-4 bg-primary text-white rounded-xl font-bold text-base">Sign Up</a>
-                    
+                    <a href="signup.html"
+                        class="text-center py-4 bg-primary text-white rounded-xl font-bold text-base">Sign Up</a>
+
                     <!-- Mobile Utilities Row -->
                     <div class="flex items-center justify-between pt-4 border-t border-slate-100 dark:border-white/5">
                         <span class="text-sm font-bold text-slate-500 uppercase tracking-widest">Settings</span>
                         <div class="flex items-center space-x-3">
-                            <button onclick="toggleTheme()" class="w-12 h-12 flex items-center justify-center rounded-xl bg-slate-100 dark:bg-white/5 text-slate-600 dark:text-slate-400" title="Toggle Theme">
-                                <svg class="w-6 h-6 dark:hidden" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
-                                <svg class="w-6 h-6 hidden dark:block text-primary" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+                            <button onclick="toggleTheme()"
+                                class="w-12 h-12 flex items-center justify-center rounded-xl bg-slate-100 dark:bg-white/5 text-slate-600 dark:text-slate-400"
+                                title="Toggle Theme">
+                                <svg class="w-6 h-6 dark:hidden" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                                </svg>
+                                <svg class="w-6 h-6 hidden dark:block text-primary" fill="currentColor"
+                                    viewBox="0 0 20 20">
+                                    <path
+                                        d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+                                        fill-rule="evenodd" clip-rule="evenodd"></path>
+                                </svg>
                             </button>
-                            <button onclick="toggleRTL()" class="w-12 h-12 flex items-center justify-center rounded-xl bg-slate-100 dark:bg-white/5 text-xs font-black uppercase" title="Toggle RTL">RTL</button>
+                            <button onclick="toggleRTL()"
+                                class="w-12 h-12 flex items-center justify-center rounded-xl bg-slate-100 dark:bg-white/5 text-xs font-black uppercase"
+                                title="Toggle RTL">RTL</button>
                         </div>
                     </div>
                 </div>
@@ -125,12 +157,18 @@
         <div class="hero-content-centered">
             <div class="reveal">
                 <h1 class="text-6xl lg:text-8xl font-display font-black leading-[1.1] mb-8 text-white">
-                    WE WRAP <br> <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary via-accent to-secondary">BIG IDEAS.</span>
+                    WE WRAP <br> <span
+                        class="text-transparent bg-clip-text bg-gradient-to-r from-primary via-accent to-secondary">BIG
+                        IDEAS.</span>
                 </h1>
-                <p class="text-xl text-slate-200 mb-12 max-w-3xl mx-auto leading-relaxed">From boutique startups to global enterprises, we design packaging that commands attention and drives brand loyalty.</p>
+                <p class="text-xl text-slate-200 mb-12 max-w-3xl mx-auto leading-relaxed">From boutique startups to
+                    global enterprises, we design packaging that commands attention and drives brand loyalty.</p>
                 <div class="flex flex-col sm:flex-row gap-6 justify-center">
-                    <a href="portfolio.html" class="px-10 py-5 bg-primary text-white rounded-2xl font-black text-xl btn-cta">EXPLORE WORK</a>
-                    <a href="contact.html" class="px-10 py-5 bg-white/10 backdrop-blur-md border-2 border-white/20 text-white rounded-2xl font-black text-xl btn-cta-secondary hover:bg-white/20 transition-all">SAY HELLO</a>
+                    <a href="portfolio.html"
+                        class="px-10 py-5 bg-primary text-white rounded-2xl font-black text-xl btn-cta">EXPLORE WORK</a>
+                    <a href="contact.html"
+                        class="px-10 py-5 bg-white/10 backdrop-blur-md border-2 border-white/20 text-white rounded-2xl font-black text-xl btn-cta-secondary hover:bg-white/20 transition-all">SAY
+                        HELLO</a>
                 </div>
             </div>
         </div>
@@ -142,31 +180,41 @@
             <div class="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
                 <!-- Mockup Display Column -->
                 <div class="lg:col-span-7 relative reveal">
-                    <div class="aspect-square bg-gradient-to-br from-primary/10 to-secondary/5 rounded-full animate-pulse absolute -z-10 blur-[120px] w-full h-full"></div>
-                    <div class="relative overflow-hidden rounded-[2rem] border border-white/10 shadow-2xl bg-white/5 backdrop-blur-md p-4">
-                        <img src="packaging_showcase_hero_1778308620125.png" alt="High-Fidelity 3D Packaging Mockup" class="w-full h-auto rounded-2xl animate-float object-cover">
+                    <div
+                        class="aspect-square bg-gradient-to-br from-primary/10 to-secondary/5 rounded-full animate-pulse absolute -z-10 blur-[120px] w-full h-full">
+                    </div>
+                    <div
+                        class="relative overflow-hidden rounded-[2rem] border border-white/10 shadow-2xl bg-white/5 backdrop-blur-md p-4">
+                        <img src="https://images.pexels.com/photos/7670691/pexels-photo-7670691.jpeg"
+                            alt="High-Fidelity 3D Packaging Mockup"
+                            class="w-full h-auto rounded-2xl animate-float object-cover">
                     </div>
                 </div>
 
                 <!-- Editorial Content Column -->
                 <div class="lg:col-span-5 reveal delay-200 text-left rtl:text-right">
-                    <span class="inline-block py-1 px-4 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-bold tracking-wider uppercase mb-6">
+                    <span
+                        class="inline-block py-1 px-4 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-bold tracking-wider uppercase mb-6">
                         3D Prototyping
                     </span>
                     <h2 class="text-4xl lg:text-6xl font-display font-medium mb-6 leading-[1.15]">
                         Unboxing <br>The Experience.
                     </h2>
                     <p class="text-slate-400 text-base lg:text-lg mb-10 leading-relaxed font-normal">
-                        We don't just design boxes; we engineer tactile brand moments. Our hyper-realistic digital mockups simulate physical folds, texture densities, and surface reflections, allowing you to perfect every detail before entering production.
+                        We don't just design boxes; we engineer tactile brand moments. Our hyper-realistic digital
+                        mockups simulate physical folds, texture densities, and surface reflections, allowing you to
+                        perfect every detail before entering production.
                     </p>
                     <div class="grid grid-cols-2 gap-8 border-t border-white/10 pt-8">
                         <div>
                             <div class="text-3xl font-medium text-white mb-1">99.8%</div>
-                            <div class="text-[10px] font-medium uppercase tracking-widest text-slate-500">Color Accuracy</div>
+                            <div class="text-[10px] font-medium uppercase tracking-widest text-slate-500">Color Accuracy
+                            </div>
                         </div>
                         <div>
                             <div class="text-3xl font-medium text-primary mb-1">360°</div>
-                            <div class="text-[10px] font-medium uppercase tracking-widest text-slate-500">Interactive View</div>
+                            <div class="text-[10px] font-medium uppercase tracking-widest text-slate-500">Interactive
+                                View</div>
                         </div>
                     </div>
                 </div>
@@ -179,77 +227,114 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col lg:flex-row justify-between items-center lg:items-end mb-20 reveal">
                 <div class="max-w-2xl text-center lg:text-left mb-10 lg:mb-0">
-                    <h2 class="text-4xl lg:text-5xl font-display font-medium mb-6 tracking-tight">Recognized for <br><span class="text-primary">Bold Innovation.</span></h2>
-                    <p class="text-slate-500 text-lg">Our commitment to pushing boundaries has earned us some of the industry's most prestigious accolades.</p>
+                    <h2 class="text-4xl lg:text-5xl font-display font-medium mb-6 tracking-tight">Recognized for
+                        <br><span class="text-primary">Bold Innovation.</span></h2>
+                    <p class="text-slate-500 text-lg">Our commitment to pushing boundaries has earned us some of the
+                        industry's most prestigious accolades.</p>
                 </div>
                 <div class="flex space-x-12 mt-10 lg:mt-0">
                     <div class="flex flex-col items-center group">
-                        <div class="w-16 h-16 mb-4 text-amber-400 transition-all duration-300 hover:scale-110 drop-shadow-[0_0_15px_rgba(251,191,36,0.35)]">
-                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+                        <div
+                            class="w-16 h-16 mb-4 text-amber-400 transition-all duration-300 hover:scale-110 drop-shadow-[0_0_15px_rgba(251,191,36,0.35)]">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" />
+                            </svg>
                         </div>
-                        <span class="text-[10px] font-medium uppercase tracking-widest text-slate-400 dark:text-slate-200">Dieline Gold</span>
+                        <span
+                            class="text-[10px] font-medium uppercase tracking-widest text-slate-400 dark:text-slate-200">Dieline
+                            Gold</span>
                     </div>
                     <div class="flex flex-col items-center group">
-                        <div class="w-16 h-16 mb-4 text-amber-400 transition-all duration-300 hover:scale-110 drop-shadow-[0_0_15px_rgba(251,191,36,0.35)]">
-                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+                        <div
+                            class="w-16 h-16 mb-4 text-amber-400 transition-all duration-300 hover:scale-110 drop-shadow-[0_0_15px_rgba(251,191,36,0.35)]">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" />
+                            </svg>
                         </div>
-                        <span class="text-[10px] font-medium uppercase tracking-widest text-slate-400 dark:text-slate-200">Pentawards 24</span>
+                        <span
+                            class="text-[10px] font-medium uppercase tracking-widest text-slate-400 dark:text-slate-200">Pentawards
+                            24</span>
                     </div>
                 </div>
             </div>
 
             <!-- Categories Filters -->
             <div class="flex flex-wrap gap-3 mb-10 reveal" id="category-filters">
-                <button data-filter="all" class="px-5 py-2 rounded-full bg-primary text-white font-bold transition-all text-xs">All Verticals</button>
-                <button data-filter="beverage" class="px-5 py-2 rounded-full bg-slate-100 dark:bg-white/5 text-slate-600 dark:text-slate-300 hover:bg-primary hover:text-white transition-all font-bold text-xs">Spirits & Beverages</button>
-                <button data-filter="food" class="px-5 py-2 rounded-full bg-slate-100 dark:bg-white/5 text-slate-600 dark:text-slate-300 hover:bg-primary hover:text-white transition-all font-bold text-xs">Confectionery</button>
-                <button data-filter="beauty" class="px-5 py-2 rounded-full bg-slate-100 dark:bg-white/5 text-slate-600 dark:text-slate-300 hover:bg-primary hover:text-white transition-all font-bold text-xs">Cosmetics</button>
-                <button data-filter="structural" class="px-5 py-2 rounded-full bg-slate-100 dark:bg-white/5 text-slate-600 dark:text-slate-300 hover:bg-primary hover:text-white transition-all font-bold text-xs">E-Commerce</button>
+                <button data-filter="all"
+                    class="px-5 py-2 rounded-full bg-primary text-white font-bold transition-all text-xs">All
+                    Verticals</button>
+                <button data-filter="beverage"
+                    class="px-5 py-2 rounded-full bg-slate-100 dark:bg-white/5 text-slate-600 dark:text-slate-300 hover:bg-primary hover:text-white transition-all font-bold text-xs">Spirits
+                    & Beverages</button>
+                <button data-filter="food"
+                    class="px-5 py-2 rounded-full bg-slate-100 dark:bg-white/5 text-slate-600 dark:text-slate-300 hover:bg-primary hover:text-white transition-all font-bold text-xs">Confectionery</button>
+                <button data-filter="beauty"
+                    class="px-5 py-2 rounded-full bg-slate-100 dark:bg-white/5 text-slate-600 dark:text-slate-300 hover:bg-primary hover:text-white transition-all font-bold text-xs">Cosmetics</button>
+                <button data-filter="structural"
+                    class="px-5 py-2 rounded-full bg-slate-100 dark:bg-white/5 text-slate-600 dark:text-slate-300 hover:bg-primary hover:text-white transition-all font-bold text-xs">E-Commerce</button>
             </div>
 
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
                 <!-- Category 1 -->
-                <div class="bg-slate-50 dark:bg-dark-soft/30 rounded-3xl overflow-hidden border border-slate-100 dark:border-white/5 group hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/5 hover:-translate-y-2 transition-all duration-300 reveal flex flex-col h-full portfolio-item" data-category="beverage">
+                <div class="bg-slate-50 dark:bg-dark-soft/30 rounded-3xl overflow-hidden border border-slate-100 dark:border-white/5 group hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/5 hover:-translate-y-2 transition-all duration-300 reveal flex flex-col h-full portfolio-item"
+                    data-category="beverage">
                     <div class="h-48 overflow-hidden relative">
-                        <img src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&q=80&w=400" alt="Premium Spirits Mockup" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <img src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&q=80&w=400"
+                            alt="Premium Spirits Mockup"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-60"></div>
                     </div>
                     <div class="p-6 flex flex-col flex-grow text-left rtl:text-right">
                         <h4 class="text-xl font-bold mb-3 dark:text-white">Premium Spirits</h4>
-                        <p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">Luxury glass finishing and high-end label textures for boutique distilleries.</p>
+                        <p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">Luxury glass finishing and
+                            high-end label textures for boutique distilleries.</p>
                     </div>
                 </div>
                 <!-- Category 2 -->
-                <div class="bg-slate-50 dark:bg-dark-soft/30 rounded-3xl overflow-hidden border border-slate-100 dark:border-white/5 group hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/5 hover:-translate-y-2 transition-all duration-300 reveal delay-100 flex flex-col h-full portfolio-item" data-category="food">
+                <div class="bg-slate-50 dark:bg-dark-soft/30 rounded-3xl overflow-hidden border border-slate-100 dark:border-white/5 group hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/5 hover:-translate-y-2 transition-all duration-300 reveal delay-100 flex flex-col h-full portfolio-item"
+                    data-category="food">
                     <div class="h-48 overflow-hidden relative">
-                        <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&q=80&w=400" alt="Confectionery Mockup" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&q=80&w=400"
+                            alt="Confectionery Mockup"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-60"></div>
                     </div>
                     <div class="p-6 flex flex-col flex-grow text-left rtl:text-right">
                         <h4 class="text-xl font-bold mb-3 dark:text-white">Confectionery</h4>
-                        <p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">Playful, vibrant, and shelf-popping designs for the modern snack market.</p>
+                        <p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">Playful, vibrant, and
+                            shelf-popping designs for the modern snack market.</p>
                     </div>
                 </div>
                 <!-- Category 3 -->
-                <div class="bg-slate-50 dark:bg-dark-soft/30 rounded-3xl overflow-hidden border border-slate-100 dark:border-white/5 group hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/5 hover:-translate-y-2 transition-all duration-300 reveal delay-200 flex flex-col h-full portfolio-item" data-category="beauty">
+                <div class="bg-slate-50 dark:bg-dark-soft/30 rounded-3xl overflow-hidden border border-slate-100 dark:border-white/5 group hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/5 hover:-translate-y-2 transition-all duration-300 reveal delay-200 flex flex-col h-full portfolio-item"
+                    data-category="beauty">
                     <div class="h-48 overflow-hidden relative">
-                        <img src="https://images.unsplash.com/photo-1608248597279-f99d160bfcbc?auto=format&fit=crop&q=80&w=400" alt="Cosmetics Mockup" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <img src="https://images.unsplash.com/photo-1608248597279-f99d160bfcbc?auto=format&fit=crop&q=80&w=400"
+                            alt="Cosmetics Mockup"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-60"></div>
                     </div>
                     <div class="p-6 flex flex-col flex-grow text-left rtl:text-right">
                         <h4 class="text-xl font-bold mb-3 dark:text-white">Cosmetics</h4>
-                        <p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">Minimalist aesthetic focused on unboxing experience and sustainability.</p>
+                        <p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">Minimalist aesthetic
+                            focused on unboxing experience and sustainability.</p>
                     </div>
                 </div>
                 <!-- Category 4 -->
-                <div class="bg-slate-50 dark:bg-dark-soft/30 rounded-3xl overflow-hidden border border-slate-100 dark:border-white/5 group hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/5 hover:-translate-y-2 transition-all duration-300 reveal delay-300 flex flex-col h-full portfolio-item" data-category="structural">
+                <div class="bg-slate-50 dark:bg-dark-soft/30 rounded-3xl overflow-hidden border border-slate-100 dark:border-white/5 group hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/5 hover:-translate-y-2 transition-all duration-300 reveal delay-300 flex flex-col h-full portfolio-item"
+                    data-category="structural">
                     <div class="h-48 overflow-hidden relative">
-                        <img src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&q=80&w=400" alt="E-Commerce Mockup" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <img src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&q=80&w=400"
+                            alt="E-Commerce Mockup"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-60"></div>
                     </div>
                     <div class="p-6 flex flex-col flex-grow text-left rtl:text-right">
                         <h4 class="text-xl font-bold mb-3 dark:text-white">E-Commerce</h4>
-                        <p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">Custom shipping boxes that turn delivery into a brand statement.</p>
+                        <p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">Custom shipping boxes that
+                            turn delivery into a brand statement.</p>
                     </div>
                 </div>
             </div>
@@ -263,23 +348,28 @@
                 <h2 class="text-4xl font-display font-bold">The Power of Redesign</h2>
                 <p class="text-slate-500 mt-4">Witness the transformation from 'meh' to 'must-have'.</p>
             </div>
-            
+
             <div class="grid md:grid-cols-2 gap-12">
                 <!-- Redesign 1 -->
                 <div class="bg-slate-50 dark:bg-dark rounded-3xl p-4 reveal">
                     <div class="grid grid-cols-2 gap-4">
                         <div class="relative group">
-                            <img src="https://images.pexels.com/photos/1013401/pexels-photo-1013401.jpeg" class="rounded-2xl grayscale group-hover:grayscale-0 transition-all duration-500 aspect-video object-cover">
-                            <span class="absolute top-4 left-4 bg-black/50 text-white px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-widest">BEFORE</span>
+                            <img src="https://images.pexels.com/photos/1013401/pexels-photo-1013401.jpeg"
+                                class="rounded-2xl grayscale group-hover:grayscale-0 transition-all duration-500 aspect-video object-cover">
+                            <span
+                                class="absolute top-4 left-4 bg-black/50 text-white px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-widest">BEFORE</span>
                         </div>
                         <div class="relative">
-                            <img src="https://images.pexels.com/photos/827513/pexels-photo-827513.jpeg" class="rounded-2xl aspect-video object-cover">
-                            <span class="absolute top-4 left-4 bg-primary text-white px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-widest">AFTER</span>
+                            <img src="https://images.pexels.com/photos/827513/pexels-photo-827513.jpeg"
+                                class="rounded-2xl aspect-video object-cover">
+                            <span
+                                class="absolute top-4 left-4 bg-primary text-white px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-widest">AFTER</span>
                         </div>
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-bold mb-2">Artisan Granola Co.</h3>
-                        <p class="text-slate-500 text-sm">Objective: Modernize legacy brand while maintaining heritage trust. Result: 25% increase in shelf velocity.</p>
+                        <p class="text-slate-500 text-sm">Objective: Modernize legacy brand while maintaining heritage
+                            trust. Result: 25% increase in shelf velocity.</p>
                     </div>
                 </div>
 
@@ -287,17 +377,21 @@
                 <div class="bg-slate-50 dark:bg-dark rounded-3xl p-4 reveal delay-200">
                     <div class="grid grid-cols-2 gap-4">
                         <div class="relative group">
-                            <img src="https://images.pexels.com/photos/4041391/pexels-photo-4041391.jpeg" class="rounded-2xl grayscale group-hover:grayscale-0 transition-all duration-500 aspect-video object-cover">
-                            <span class="absolute top-4 left-4 bg-black/50 text-white px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-widest">BEFORE</span>
+                            <img src="https://images.pexels.com/photos/4041391/pexels-photo-4041391.jpeg"
+                                class="rounded-2xl grayscale group-hover:grayscale-0 transition-all duration-500 aspect-video object-cover">
+                            <span
+                                class="absolute top-4 left-4 bg-black/50 text-white px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-widest">BEFORE</span>
                         </div>
                         <div class="relative">
                             <img src="assets/hero-cosmetic.png" class="rounded-2xl aspect-video object-cover">
-                            <span class="absolute top-4 left-4 bg-primary text-white px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-widest">AFTER</span>
+                            <span
+                                class="absolute top-4 left-4 bg-primary text-white px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-widest">AFTER</span>
                         </div>
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-bold mb-2">Pure Glow Skincare</h3>
-                        <p class="text-slate-500 text-sm">Objective: Premiumize for high-end boutique retail. Result: Successfully listed in Sephora.</p>
+                        <p class="text-slate-500 text-sm">Objective: Premiumize for high-end boutique retail. Result:
+                            Successfully listed in Sephora.</p>
                     </div>
                 </div>
             </div>
@@ -309,39 +403,64 @@
         <div class="max-w-7xl mx-auto px-4">
             <div class="flex flex-col items-center text-center mb-16 reveal">
                 <div class="max-w-2xl">
-                    <h2 class="text-4xl lg:text-5xl font-display font-black mb-6 tracking-tight">Technical Precision.</h2>
-                    <p class="text-slate-500 text-lg">Beyond aesthetics, we engineer packaging for the rigors of the global supply chain and the precision of the shelf.</p>
+                    <h2 class="text-4xl lg:text-5xl font-display font-black mb-6 tracking-tight">Technical Precision.
+                    </h2>
+                    <p class="text-slate-500 text-lg">Beyond aesthetics, we engineer packaging for the rigors of the
+                        global supply chain and the precision of the shelf.</p>
                 </div>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <!-- Cap 1 -->
-                <div class="p-10 bg-slate-50 dark:bg-dark-soft/30 rounded-[3rem] border border-transparent hover:border-primary/20 transition-all group reveal flex flex-col items-center text-center">
-                    <div class="w-12 h-12 bg-primary/10 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-primary transition-colors">
-                        <svg class="w-6 h-6 text-primary group-hover:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                <div
+                    class="p-10 bg-slate-50 dark:bg-dark-soft/30 rounded-[3rem] border border-transparent hover:border-primary/20 transition-all group reveal flex flex-col items-center text-center">
+                    <div
+                        class="w-12 h-12 bg-primary/10 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-primary transition-colors">
+                        <svg class="w-6 h-6 text-primary group-hover:text-white" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
                     </div>
                     <h3 class="text-2xl font-bold mb-4">Color Fidelity</h3>
-                    <p class="text-slate-500 text-sm leading-relaxed mb-6">Delta-E < 2.0 precision matching across all substrates, from corrugated to flexible films.</p>
-                    <div class="text-[10px] font-black text-primary uppercase tracking-widest">Pantone Verified</div>
+                    <p class="text-slate-500 text-sm leading-relaxed mb-6">Delta-E < 2.0 precision matching across all
+                            substrates, from corrugated to flexible films.</p>
+                            <div class="text-[10px] font-black text-primary uppercase tracking-widest">Pantone Verified
+                            </div>
                 </div>
 
                 <!-- Cap 2 -->
-                <div class="p-10 bg-slate-50 dark:bg-dark-soft/30 rounded-[3rem] border border-transparent hover:border-secondary/20 transition-all group reveal delay-100 flex flex-col items-center text-center">
-                    <div class="w-12 h-12 bg-secondary/10 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-secondary transition-colors">
-                        <svg class="w-6 h-6 text-secondary group-hover:text-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" /></svg>
+                <div
+                    class="p-10 bg-slate-50 dark:bg-dark-soft/30 rounded-[3rem] border border-transparent hover:border-secondary/20 transition-all group reveal delay-100 flex flex-col items-center text-center">
+                    <div
+                        class="w-12 h-12 bg-secondary/10 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-secondary transition-colors">
+                        <svg class="w-6 h-6 text-secondary group-hover:text-dark" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+                        </svg>
                     </div>
                     <h3 class="text-2xl font-bold mb-4">Eco-Compliance</h3>
-                    <p class="text-slate-500 text-sm leading-relaxed mb-6">Plastic-free audits and FSC-certified material sourcing integrated into every dieline.</p>
-                    <div class="text-[10px] font-black text-secondary uppercase tracking-widest">Sustainability First</div>
+                    <p class="text-slate-500 text-sm leading-relaxed mb-6">Plastic-free audits and FSC-certified
+                        material sourcing integrated into every dieline.</p>
+                    <div class="text-[10px] font-black text-secondary uppercase tracking-widest">Sustainability First
+                    </div>
                 </div>
 
                 <!-- Cap 3 -->
-                <div class="p-10 bg-slate-50 dark:bg-dark-soft/30 rounded-[3rem] border border-transparent hover:border-accent/20 transition-all group reveal delay-200 flex flex-col items-center text-center">
-                    <div class="w-12 h-12 bg-accent/10 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-accent transition-colors">
-                        <svg class="w-6 h-6 text-accent group-hover:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" /></svg>
+                <div
+                    class="p-10 bg-slate-50 dark:bg-dark-soft/30 rounded-[3rem] border border-transparent hover:border-accent/20 transition-all group reveal delay-200 flex flex-col items-center text-center">
+                    <div
+                        class="w-12 h-12 bg-accent/10 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-accent transition-colors">
+                        <svg class="w-6 h-6 text-accent group-hover:text-white" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                        </svg>
                     </div>
                     <h3 class="text-2xl font-bold mb-4">Retail Impact</h3>
-                    <p class="text-slate-500 text-sm leading-relaxed mb-6">Eye-tracking shelf simulations and heat-map analysis for maximum visual conversion.</p>
+                    <p class="text-slate-500 text-sm leading-relaxed mb-6">Eye-tracking shelf simulations and heat-map
+                        analysis for maximum visual conversion.</p>
                     <div class="text-[10px] font-black text-accent uppercase tracking-widest">Data Driven</div>
                 </div>
             </div>
@@ -351,10 +470,15 @@
     <!-- Contact CTA -->
     <section class="py-24 max-w-7xl mx-auto px-4">
         <div class="bg-primary rounded-[3rem] p-12 lg:p-24 text-center text-white relative overflow-hidden reveal">
-            <div class="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full -translate-y-1/2 translate-x-1/2 blur-3xl"></div>
+            <div
+                class="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full -translate-y-1/2 translate-x-1/2 blur-3xl">
+            </div>
             <h2 class="text-4xl lg:text-6xl font-display font-black mb-8">Ready to win the shelf?</h2>
-            <p class="text-xl mb-12 text-white/80 max-w-2xl mx-auto">Let's build a package that tells your story and sells your product.</p>
-            <a href="contact.html" class="inline-block px-12 py-6 bg-white text-primary rounded-2xl font-black text-2xl hover:scale-105 transition-transform">LET'S START</a>
+            <p class="text-xl mb-12 text-white/80 max-w-2xl mx-auto">Let's build a package that tells your story and
+                sells your product.</p>
+            <a href="contact.html"
+                class="inline-block px-12 py-6 bg-white text-primary rounded-2xl font-black text-2xl hover:scale-105 transition-transform">LET'S
+                START</a>
         </div>
     </section>
 
@@ -366,12 +490,14 @@
                     <a href="index.html" class="flex items-center space-x-2 mb-6">
                         <div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
                             <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
                             </svg>
                         </div>
                         <span class="text-2xl font-display font-bold tracking-tight">WRAPT</span>
                     </a>
-                    <p class="text-slate-400 mb-6">Premium packaging design for brands that want to stand out and stay ahead.</p>
+                    <p class="text-slate-400 mb-6">Premium packaging design for brands that want to stand out and stay
+                        ahead.</p>
                     <div class="flex space-x-4 rtl:space-x-reverse">
                         <a href="#"
                             class="w-10 h-10 bg-white/5 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
@@ -421,12 +547,15 @@
                     <h4 class="text-lg font-bold mb-6">Newsletter</h4>
                     <p class="text-slate-400 mb-4">Get the latest packaging trends and insights.</p>
                     <form class="flex flex-col space-y-2">
-                        <input type="email" placeholder="Email address" class="px-4 py-3 bg-white/5 border border-white/10 rounded-xl focus:outline-none focus:border-primary">
-                        <button class="px-4 py-3 bg-primary text-white rounded-xl font-bold hover:bg-opacity-90 transition-all">Subscribe</button>
+                        <input type="email" placeholder="Email address"
+                            class="px-4 py-3 bg-white/5 border border-white/10 rounded-xl focus:outline-none focus:border-primary">
+                        <button
+                            class="px-4 py-3 bg-primary text-white rounded-xl font-bold hover:bg-opacity-90 transition-all">Subscribe</button>
                     </form>
                 </div>
             </div>
-            <div class="border-t border-white/10 pt-10 flex flex-col md:flex-row justify-between items-center text-slate-500 text-sm">
+            <div
+                class="border-t border-white/10 pt-10 flex flex-col md:flex-row justify-between items-center text-slate-500 text-sm">
                 <p>&copy; 2026 Wrapt Packaging Studio. All rights reserved.</p>
                 <div class="flex space-x-6 mt-4 md:mt-0 rtl:space-x-reverse">
                     <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
@@ -476,4 +605,5 @@
         });
     </script>
 </body>
+
 </html>
