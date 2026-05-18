@@ -2,8 +2,8 @@
 
 :root {
     --primary: #FF4D00;
-    --secondary: #00F5FF;
-    --accent: #FF00FF;
+    --secondary: #FF834D;
+    --accent: #D63F00;
 }
 
 [dir="rtl"] {
@@ -17,6 +17,45 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Outfit', sans-serif;
+    font-weight: 500;
+}
+
+/* 
+  Readability & Hierarchy Tuning (UX Polish):
+  - Maintain heading font weights strictly below 600 (using 500 / Medium or 300 / Light).
+  - Keep paragraph & subheading font weights strictly between 400–550 (using 400 / Normal and 500 / Medium).
+*/
+p {
+    font-weight: 400;
+}
+
+/* Global utility overrides for Tailwind classes to guarantee compliance */
+.font-normal {
+    font-weight: 400 !important;
+}
+
+.font-medium,
+.font-semibold,
+.font-bold,
+.font-extrabold,
+.font-black {
+    font-weight: 500 !important;
+}
+
+.font-thin,
+.font-extralight,
+.font-light {
+    font-weight: 300 !important;
+}
+
+/* Ensure paragraphs and subheadings never fall below 400 */
+p.font-thin,
+p.font-extralight,
+p.font-light,
+span.font-thin,
+span.font-extralight,
+span.font-light {
+    font-weight: 400 !important;
 }
 
 .glass {
@@ -106,7 +145,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .btn-cta-secondary:hover {
     transform: translateY(-4px) scale(1.03);
-    box-shadow: 0 20px 40px -10px rgba(0, 245, 255, 0.5);
+    box-shadow: 0 20px 40px -10px rgba(255, 77, 0, 0.35);
     filter: brightness(1.1);
 }
 

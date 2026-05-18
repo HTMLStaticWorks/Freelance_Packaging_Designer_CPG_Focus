@@ -15,8 +15,8 @@
                 extend: {
                     colors: {
                         primary: '#FF4D00',
-                        secondary: '#00F5FF',
-                        accent: '#FF00FF',
+                        secondary: '#FF834D',
+                        accent: '#D63F00',
                         dark: '#121212',
                         'dark-soft': '#1E1E1E'
                     }
@@ -157,14 +157,13 @@
                             most impactful packaging designs across various industries.</p>
 
                         <!-- Filters -->
-                        <div class="flex flex-wrap justify-center gap-4">
-                            <button class="px-6 py-2 rounded-full bg-primary text-white font-bold btn-cta">All</button>
-                            <button
-                                class="px-6 py-2 rounded-full bg-white/10 backdrop-blur-md text-white hover:bg-primary transition-all font-bold border border-white/20">Food</button>
-                            <button
-                                class="px-6 py-2 rounded-full bg-white/10 backdrop-blur-md text-white hover:bg-primary transition-all font-bold border border-white/20">Beverage</button>
-                            <button
-                                class="px-6 py-2 rounded-full bg-white/10 backdrop-blur-md text-white hover:bg-primary transition-all font-bold border border-white/20">Beauty</button>
+                        <div class="flex flex-wrap justify-center gap-4 mt-8" id="portfolio-filters">
+                            <button data-filter="all" class="px-6 py-2.5 rounded-full bg-primary text-white font-bold btn-cta transition-all">All Showcase</button>
+                            <button data-filter="food" class="px-6 py-2.5 rounded-full bg-white/10 backdrop-blur-md text-white hover:bg-primary transition-all font-bold border border-white/20">Food & Snacks</button>
+                            <button data-filter="beverage" class="px-6 py-2.5 rounded-full bg-white/10 backdrop-blur-md text-white hover:bg-primary transition-all font-bold border border-white/20">Beverages & Bottles</button>
+                            <button data-filter="beauty" class="px-6 py-2.5 rounded-full bg-white/10 backdrop-blur-md text-white hover:bg-primary transition-all font-bold border border-white/20">Beauty & Cosmetics</button>
+                            <button data-filter="tech" class="px-6 py-2.5 rounded-full bg-white/10 backdrop-blur-md text-white hover:bg-primary transition-all font-bold border border-white/20">Tech & Sleeves</button>
+                            <button data-filter="structural" class="px-6 py-2.5 rounded-full bg-white/10 backdrop-blur-md text-white hover:bg-primary transition-all font-bold border border-white/20">Structural & Dielines</button>
                         </div>
                     </div>
                 </div>
@@ -176,7 +175,7 @@
     <section class="pb-32 px-4">
         <div class="max-w-7xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <!-- Item 1 -->
-            <div class="shelf-impact-card reveal">
+            <div class="shelf-impact-card portfolio-item reveal" data-category="beverage">
                 <div class="relative group overflow-hidden rounded-3xl bg-slate-100 dark:bg-dark-soft">
                     <img src="https://images.pexels.com/photos/26238864/pexels-photo-26238864.jpeg"
                         class="w-full h-[400px] object-cover">
@@ -192,7 +191,7 @@
             </div>
 
             <!-- Item 2 -->
-            <div class="shelf-impact-card reveal delay-100">
+            <div class="shelf-impact-card portfolio-item reveal delay-100" data-category="beauty">
                 <div class="relative group overflow-hidden rounded-3xl bg-slate-100 dark:bg-dark-soft">
                     <img src="assets/hero-cosmetic.png" class="w-full h-[400px] object-cover">
                     <div
@@ -207,7 +206,7 @@
             </div>
 
             <!-- Item 3 -->
-            <div class="shelf-impact-card reveal delay-200">
+            <div class="shelf-impact-card portfolio-item reveal delay-200" data-category="food">
                 <div class="relative group overflow-hidden rounded-3xl bg-slate-100 dark:bg-dark-soft">
                     <img src="assets/portfolio-snack.png" class="w-full h-[400px] object-cover">
                     <div
@@ -222,7 +221,7 @@
             </div>
 
             <!-- Item 4 (Unsplash for variety) -->
-            <div class="shelf-impact-card reveal">
+            <div class="shelf-impact-card portfolio-item reveal" data-category="tech">
                 <div class="relative group overflow-hidden rounded-3xl bg-slate-100 dark:bg-dark-soft">
                     <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&q=80&w=600"
                         class="w-full h-[500px] object-cover">
@@ -238,7 +237,7 @@
             </div>
 
             <!-- Item 5 -->
-            <div class="shelf-impact-card reveal delay-100">
+            <div class="shelf-impact-card portfolio-item reveal delay-100" data-category="structural">
                 <div class="relative group overflow-hidden rounded-3xl bg-slate-100 dark:bg-dark-soft">
                     <img src="https://images.unsplash.com/photo-1606787366850-de6330128bfc?auto=format&fit=crop&q=80&w=600"
                         class="w-full h-[500px] object-cover">
@@ -254,7 +253,7 @@
             </div>
 
             <!-- Item 6 -->
-            <div class="shelf-impact-card reveal delay-200">
+            <div class="shelf-impact-card portfolio-item reveal delay-200" data-category="beverage">
                 <div class="relative group overflow-hidden rounded-3xl bg-slate-100 dark:bg-dark-soft">
                     <img src="https://images.unsplash.com/photo-1556228578-0d85b1a4d571?auto=format&fit=crop&q=80&w=600"
                         class="w-full h-[500px] object-cover">
@@ -374,6 +373,48 @@
     </footer>
 
     <script src="js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const filterButtons = document.querySelectorAll('#portfolio-filters button');
+            const portfolioItems = document.querySelectorAll('.portfolio-item');
+
+            filterButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const filter = button.getAttribute('data-filter');
+
+                    // Reset active class for all buttons
+                    filterButtons.forEach(btn => {
+                        btn.className = 'px-6 py-2.5 rounded-full bg-white/10 backdrop-blur-md text-white hover:bg-primary transition-all font-bold border border-white/20';
+                    });
+
+                    // Add active styles to clicked button
+                    if (filter === 'all') {
+                        button.className = 'px-6 py-2.5 rounded-full bg-primary text-white font-bold btn-cta transition-all';
+                    } else {
+                        button.className = 'px-6 py-2.5 rounded-full bg-primary text-white font-bold border border-primary transition-all';
+                    }
+
+                    // Filter items with scale and opacity animations
+                    portfolioItems.forEach(item => {
+                        const itemCategory = item.getAttribute('data-category');
+                        if (filter === 'all' || itemCategory === filter) {
+                            item.style.display = 'block';
+                            setTimeout(() => {
+                                item.style.opacity = '1';
+                                item.style.transform = 'scale(1)';
+                            }, 50);
+                        } else {
+                            item.style.opacity = '0';
+                            item.style.transform = 'scale(0.95)';
+                            setTimeout(() => {
+                                item.style.display = 'none';
+                            }, 300);
+                        }
+                    });
+                });
+            });
+        });
+    </script>
 </body>
 
 </html>

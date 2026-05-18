@@ -15,8 +15,8 @@
                 extend: {
                     colors: {
                         primary: '#FF4D00',
-                        secondary: '#00F5FF',
-                        accent: '#FF00FF',
+                        secondary: '#FF834D',
+                        accent: '#D63F00',
                         dark: '#121212',
                         'dark-soft': '#1E1E1E'
                     },
@@ -144,7 +144,7 @@
     <!-- Hero Section -->
     <section class="hero-full-bleed pt-32 pb-20 lg:pt-48 lg:pb-32">
         <div class="hero-bg-container">
-            <img src="assets/hero-coffee.png" alt="Packaging Design Background">
+            <img src="packaging_showcase_hero_1778308620125.png" alt="Packaging Mockup Showcase Background">
             <div class="hero-overlay"></div>
         </div>
 
@@ -222,10 +222,18 @@
                 </a>
             </div>
 
+            <!-- Homepage Showcase Filters -->
+            <div class="flex flex-wrap gap-3 mb-10 reveal" id="showcase-filters">
+                <button data-filter="all" class="px-5 py-2 rounded-full bg-primary text-white font-bold transition-all text-xs">All Showcase</button>
+                <button data-filter="food" class="px-5 py-2 rounded-full bg-slate-100 dark:bg-white/5 text-slate-600 dark:text-slate-300 hover:bg-primary hover:text-white transition-all font-bold text-xs">Food & Snacks</button>
+                <button data-filter="beverage" class="px-5 py-2 rounded-full bg-slate-100 dark:bg-white/5 text-slate-600 dark:text-slate-300 hover:bg-primary hover:text-white transition-all font-bold text-xs">Beverages & Bottles</button>
+                <button data-filter="beauty" class="px-5 py-2 rounded-full bg-slate-100 dark:bg-white/5 text-slate-600 dark:text-slate-300 hover:bg-primary hover:text-white transition-all font-bold text-xs">Beauty & Cosmetics</button>
+            </div>
+
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Project 1 -->
                 <div
-                    class="shelf-impact-card bg-white dark:bg-dark rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl transition-all reveal flex flex-col">
+                    class="shelf-impact-card portfolio-item bg-white dark:bg-dark rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl transition-all reveal flex flex-col" data-category="food">
                     <div class="h-80 overflow-hidden relative group">
                         <img src="https://images.pexels.com/photos/7262457/pexels-photo-7262457.jpeg"
                             alt="Snack Box Design"
@@ -251,7 +259,7 @@
 
                 <!-- Project 2 -->
                 <div
-                    class="shelf-impact-card bg-white dark:bg-dark rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl transition-all reveal delay-200 flex flex-col">
+                    class="shelf-impact-card portfolio-item bg-white dark:bg-dark rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl transition-all reveal delay-200 flex flex-col" data-category="beauty">
                     <div class="h-80 overflow-hidden relative group">
                         <img src="https://images.pexels.com/photos/8102135/pexels-photo-8102135.jpeg"
                             alt="Cosmetic Packaging"
@@ -277,7 +285,7 @@
 
                 <!-- Project 3 -->
                 <div
-                    class="shelf-impact-card bg-white dark:bg-dark rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl transition-all reveal delay-400 flex flex-col">
+                    class="shelf-impact-card portfolio-item bg-white dark:bg-dark rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl transition-all reveal delay-400 flex flex-col" data-category="beverage">
                     <div class="h-80 overflow-hidden relative group">
                         <img src="https://images.pexels.com/photos/34536647/pexels-photo-34536647.jpeg"
                             alt="Coffee Packaging"
@@ -647,6 +655,44 @@
     </footer>
 
     <script src="js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const filterButtons = document.querySelectorAll('#showcase-filters button');
+            const portfolioItems = document.querySelectorAll('.portfolio-item');
+
+            filterButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const filter = button.getAttribute('data-filter');
+
+                    // Reset active class for all buttons
+                    filterButtons.forEach(btn => {
+                        btn.className = 'px-5 py-2 rounded-full bg-slate-100 dark:bg-white/5 text-slate-600 dark:text-slate-300 hover:bg-primary hover:text-white transition-all font-bold text-xs';
+                    });
+
+                    // Add active styles to clicked button
+                    button.className = 'px-5 py-2 rounded-full bg-primary text-white font-bold transition-all text-xs';
+
+                    // Filter items with scale and opacity animations
+                    portfolioItems.forEach(item => {
+                        const itemCategory = item.getAttribute('data-category');
+                        if (filter === 'all' || itemCategory === filter) {
+                            item.style.display = 'block';
+                            setTimeout(() => {
+                                item.style.opacity = '1';
+                                item.style.transform = 'scale(1)';
+                            }, 50);
+                        } else {
+                            item.style.opacity = '0';
+                            item.style.transform = 'scale(0.95)';
+                            setTimeout(() => {
+                                item.style.display = 'none';
+                            }, 300);
+                        }
+                    });
+                });
+            });
+        });
+    </script>
 </body>
 
 </html>
